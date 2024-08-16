@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -11,13 +10,21 @@ public class Player : MonoBehaviour
     private float jumpingPower = 12f;
     private bool isFacingRight = true;
     private bool grounded = false;
+    private bool rolling =false;
+    [SerializeField]private Transform currentBallTransform;
 
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
-
     void Update()
     {
+        if (rolling){
+            Debug.Log("snapping..");
+            transform.rotation=currentBallTransform.rotation;
+            transform.localScale=currentBallTransform.localScale;
+            transform.position=currentBallTransform.position;
+            Flip();
+            return;
+        }
+
         horizontal = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButtonDown("Jump") && grounded)
@@ -42,11 +49,18 @@ public class Player : MonoBehaviour
         if (obj.gameObject.CompareTag("ground")){
             grounded= true;
         }
+        if (obj.gameObject.CompareTag("yarnball")){
+            currentBallTransform;
+            rolling =true;
+        }
     }
     private void OnCollisionExit2D(Collision2D obj) {
         if (obj.gameObject.CompareTag("ground"))
         {
             grounded=false;
+        }
+        if (obj.gameObject.CompareTag("yarnball")){
+            rolling =false;
         }
     }
     private void Flip()

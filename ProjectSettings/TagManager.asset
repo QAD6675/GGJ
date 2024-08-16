@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
+  - yarnball
   layers:
   - Default
   - TransparentFX
