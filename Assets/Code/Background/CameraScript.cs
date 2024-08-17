@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    [SerializeField] Transform TargetFollow;
-
-    [SerializeField] Vector2 YClamp;
+    [SerializeField] private Transform targetFollow;
+    [SerializeField] private Vector2 yClamp;
 
     private void Update()
     {
-        transform.position = TargetFollow.position;
-
-        float yPosition = Mathf.Clamp(transform.position.y, YClamp.x, YClamp.y);
-        transform.position = new Vector2(transform.position.x, yPosition);
+        Vector3 newPosition = new Vector3(targetFollow.position.x, transform.position.y, transform.position.z);
+        newPosition.y = Mathf.Clamp(newPosition.y, yClamp.x, yClamp.y);
+        transform.position = newPosition;
     }
 }

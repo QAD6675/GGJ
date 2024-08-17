@@ -2,45 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Death : MonoBehaviour
 {
-    
-    [SerializeField] float RespawnTime;
-    public Vector3 RespawnPosition;
-    public GameObject Explosion;
+    [SerializeField] private float respawnTime;
+    public Vector3 respawnPosition;
+    public GameObject explosion;
 
     private void Start()
     {
-        RespawnPosition = transform.position;
+        respawnPosition = transform.position;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "Harmful")
+        if (collision.transform.CompareTag("Harmful"))
+        {
             Die();
+        }
     }
 
     public void Die()
     {   
         PlayExplosionEffect();
         gameObject.SetActive(false);
-        Invoke(nameof(Respawn), RespawnTime);
+        Invoke(nameof(Respawn), respawnTime);
     }
 
-    void Respawn()
+    private void Respawn()
     {
         gameObject.SetActive(true);
-
-        transform.position = RespawnPosition;
+        transform.position = respawnPosition;
     }
 
-    void PlayExplosionEffect()
+    private void PlayExplosionEffect()
     {
-        if (Explosion != null)
+        if (explosion != null)
         {
             // Instantiate the explosion and play it
-            GameObject explosionInstance = Instantiate(Explosion, transform.position, Quaternion.identity);
+            GameObject explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity);
             ParticleSystem explosionParticles = explosionInstance.GetComponent<ParticleSystem>();
             
             if (explosionParticles != null)

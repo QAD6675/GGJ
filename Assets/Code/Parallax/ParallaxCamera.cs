@@ -17,12 +17,7 @@ public class ParallaxCamera : MonoBehaviour
     {
         if (transform.position.x != oldPosition)
         {
-            if (onCameraTranslate != null)
-            {
-                float delta = oldPosition - transform.position.x;
-                onCameraTranslate(delta);
-            }
-
+            onCameraTranslate?.Invoke(oldPosition - transform.position.x);
             oldPosition = transform.position.x;
         }
     }

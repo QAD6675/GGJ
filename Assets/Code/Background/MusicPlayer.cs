@@ -17,7 +17,7 @@ public class RandomMusicPlayer : MonoBehaviour
         }
     }
 
-    void PlayRandomTrack()
+    public void PlayRandomTrack()
     {
         int randomIndex = Random.Range(0, gameTracks.Length);
         audioSource.clip = gameTracks[randomIndex];

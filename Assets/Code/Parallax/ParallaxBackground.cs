@@ -19,21 +19,19 @@ public class ParallaxBackground : MonoBehaviour
         SetLayers();
     }
 
-    void SetLayers()
+ void SetLayers()
+{
+    parallaxLayers.Clear();
+
+    ParallaxLayer[] layers = GetComponentsInChildren<ParallaxLayer>();
+
+    for (int i = 0; i < layers.Length; i++)
     {
-        parallaxLayers.Clear();
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            ParallaxLayer layer = transform.GetChild(i).GetComponent<ParallaxLayer>();
-
-            if (layer != null)
-            {
-                layer.name = "Layer-" + i;
-                parallaxLayers.Add(layer);
-            }
-        }
+        ParallaxLayer layer = layers[i];
+        layer.name = "Layer-" + i;
+        parallaxLayers.Add(layer);
     }
+}
 
     void Move(float delta)
     {

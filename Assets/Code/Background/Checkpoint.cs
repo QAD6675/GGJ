@@ -3,7 +3,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     [SerializeField] SpriteRenderer _Sprite;
-    [SerializeField] Sprite AvtivatedSprite;
+    [SerializeField] Sprite ActivatedSprite;
 
     [SerializeField] AudioSource _AudioSource;
     bool playAudio = true;
@@ -12,13 +12,13 @@ public class Checkpoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Death>().RespawnPosition = transform.position;
+            collision.GetComponent<Death>().respawnPosition = transform.position;
             if (playAudio)
             {
                 _AudioSource.Play();
                 playAudio = false;
             }
-            _Sprite.sprite = AvtivatedSprite;
+            _Sprite.sprite = ActivatedSprite;
         }
         //here
     }

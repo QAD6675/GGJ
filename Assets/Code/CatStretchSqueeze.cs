@@ -17,7 +17,6 @@ public class CatStretchSqueeze : MonoBehaviour
     private bool isResetting = false; 
     void Start()
     {
-       
         originalScale = transform.localScale;
         currentStretchValue = 1f; 
         UpdateStretchText();
@@ -100,4 +99,5 @@ public class CatStretchSqueeze : MonoBehaviour
         // Update the stretch value display
         stretchText.text = $"Stretch Value: {currentStretchValue:F2}";
     }
+
 }

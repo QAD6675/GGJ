@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -16,15 +17,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (rolling){
-            Debug.Log("snapping..");
             transform.rotation=currentBallTransform.rotation;
-            transform.localScale=currentBallTransform.localScale;
             transform.position=currentBallTransform.position;
             Flip();
             return;
         }
-
-        horizontal = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButtonDown("Jump") && grounded)
         {
@@ -33,8 +30,11 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.4f);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.3f);
         }
+        
+        horizontal = Input.GetAxisRaw("Horizontal");
+
 
         Flip();
     }
@@ -49,7 +49,8 @@ public class Player : MonoBehaviour
             grounded = true;
         }
         if (obj.gameObject.CompareTag("yarnball")){
-            currentBallTransform;
+            currentBallTransform=obj.gameObject.GetComponent<Transform>();
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
             rolling =true;
         }
     }
@@ -57,9 +58,6 @@ public class Player : MonoBehaviour
         if (obj.gameObject.CompareTag("ground"))
         {
             grounded = false;
-        }
-        if (obj.gameObject.CompareTag("yarnball")){
-            rolling =false;
         }
     }
 
