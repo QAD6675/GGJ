@@ -50,7 +50,6 @@ MonoBehaviour:
   rb: {fileID: 6503507817345888459}
   goingRight: 0
   rotationSpeed: 50
-  transform: {fileID: 4145568243459053120}
 --- !u!212 &5432228220371488691
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -135,7 +134,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
