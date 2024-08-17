@@ -10,7 +10,7 @@ public class CatStretchSqueeze : MonoBehaviour
     public float stretchSpeed = 2f;  // Speed at which the player stretches/squeezes
     public float maxStretchY = 2f;   // Maximum stretch along the y-axis
     public float minScaleY = 0.5f;   // Minimum scale factor (squeeze factor)
-    public float barRegenSpeed = 1f; // Speed at which the bar regenerates when not used
+    public float barRegenSpeed = 1.4f; // Speed at which the bar regenerates when not used
     public Slider stretchSlider;     // UI Slider for displaying the stretch value
 
     private Vector3 originalScale;   // Original scale of the player
