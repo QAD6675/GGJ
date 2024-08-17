@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -14,17 +14,26 @@ public class Player : MonoBehaviour
     [SerializeField]private Transform currentBallTransform;
     [SerializeField]private Animator animator;
     [SerializeField] private Rigidbody2D rb;
+    public HealthSystem playerHealthSys;
+    public Slider healthSlider;     // UI Slider for displaying the health
 
-    void Animate(){
-        if (horizontal == 0f){
-            animator.SetBool("walking", false);
-        }else{
-            animator.SetBool("walking", true);
-        }
+
+void Start(){
+    playerHealthSys= GetComponent<HealthSystem>();
+}
+
+void Animate(){
+    if (horizontal == 0f){
+        animator.SetBool("walking", false);
+    }else{
+        animator.SetBool("walking", true);
     }
+}
 
 private void Update()
 {
+    healthSlider.value = playerHealthSys.getHealth();//update health bar value to health val
+
     Animate();
     if (rolling)
     {
@@ -39,6 +48,10 @@ private void Update()
         rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         animator.SetBool("grounded", false);
         grounded = false;
+    }
+    if (Input.GetButtonDown("Attack"))//you can edit it in settings
+    {
+        playerHealthSys.Hit();
     }
 
     if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -69,6 +82,13 @@ private void Update()
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             rolling =true;
         }
+    }
+    private void OnTriggerEnter2D(Collider2D other) {
+        playerHealthSys.myTarget=other.gameObject.GetComponent<HealthSystem>();
+        playerHealthSys.hasTarget=true;
+    }
+    private void OnTriggerExit2D(Collider2D other) {
+        playerHealthSys.hasTarget=false;
     }
 
     private void Flip()
