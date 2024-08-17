@@ -12,32 +12,47 @@ public class Player : MonoBehaviour
     private bool grounded = false;
     private bool rolling =false;
     [SerializeField]private Transform currentBallTransform;
-
+    [SerializeField]private Animator animator;
     [SerializeField] private Rigidbody2D rb;
-    void Update()
+
+    void Animate(){
+        if (horizontal == 0f){
+            animator.SetBool("walking", false);
+        }else{
+            animator.SetBool("walking", true);
+        }
+    }
+
+private void Update()
+{
+    Animate();
+    if (rolling)
     {
-        if (rolling){
-            transform.rotation=currentBallTransform.rotation;
-            transform.position=currentBallTransform.position;
-            Flip();
-            return;
-        }
+        transform.rotation = currentBallTransform.rotation;
+        transform.position = currentBallTransform.position;
+        Flip();
+        return;
+    }
 
-        if (Input.GetButtonDown("Jump") && grounded)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
+    if (Input.GetButtonDown("Jump") && grounded)
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        animator.SetBool("grounded", false);
+        grounded = false;
+    }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.3f);
-        }
-        
-        horizontal = Input.GetAxisRaw("Horizontal");
+    if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+    {
+        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.3f);
+    }
 
-
+    float newHorizontal = Input.GetAxisRaw("Horizontal");
+    if (newHorizontal != horizontal)
+    {
+        horizontal = newHorizontal;
         Flip();
     }
+}
 
     private void FixedUpdate()
     {
@@ -46,18 +61,13 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D obj) {
         if (obj.gameObject.CompareTag("ground")){
+            animator.SetBool("grounded", true);
             grounded = true;
         }
         if (obj.gameObject.CompareTag("yarnball")){
             currentBallTransform=obj.gameObject.GetComponent<Transform>();
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             rolling =true;
-        }
-    }
-    private void OnCollisionExit2D(Collision2D obj) {
-        if (obj.gameObject.CompareTag("ground"))
-        {
-            grounded = false;
         }
     }
 
