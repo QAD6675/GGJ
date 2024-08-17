@@ -49,7 +49,7 @@ private void Update()
         animator.SetBool("grounded", false);
         grounded = false;
     }
-    if (Input.GetButtonDown("Attack"))//you can edit it in settings
+    if (Input.GetKeyDown(KeyCode.Q))
     {
         playerHealthSys.Hit();
     }

@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Dog : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    void Start()
+    public Transform player;
+    private NavMeshAgent navMeshAgent;
+
+    private void Start()
     {
-        
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (player != null)
+        {
+            navMeshAgent.SetDestination(player.position);
+        }
     }
 }

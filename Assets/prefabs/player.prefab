@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3707100757447890164}
   - component: {fileID: 3928012136096420859}
   - component: {fileID: 5513430234077051398}
+  - component: {fileID: 4722237561243295664}
+  - component: {fileID: 7147915752054781062}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -179,6 +181,8 @@ MonoBehaviour:
   currentBallTransform: {fileID: 0}
   animator: {fileID: 5513430234077051398}
   rb: {fileID: 6524184650037100163}
+  playerHealthSys: {fileID: 0}
+  healthSlider: {fileID: 0}
 --- !u!114 &3928012136096420859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +199,7 @@ MonoBehaviour:
   maxStretchY: 2
   minScaleY: 0.5
   barRegenSpeed: 1
-  stretchSlider: {fileID: 3144757377227360385, guid: b47908b37f7a135149c315e965fac190, type: 3}
+  stretchSlider: {fileID: 0}
 --- !u!95 &5513430234077051398
 Animator:
   serializedVersion: 7
@@ -218,3 +222,58 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &4722237561243295664
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226915019383471063}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.30193883, y: 0.2842741}
+  m_Size: {x: 0.5059091, y: 0.54440784}
+  m_Direction: 0
+--- !u!114 &7147915752054781062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226915019383471063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb8b36cdf4b950dc8adee3cbb2b1a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myHealth: 100
+  myDamage: 100
+  myResistance: 0
+  Damagable: 1
+  myTarget: {fileID: 0}
+  hasTarget: 0
