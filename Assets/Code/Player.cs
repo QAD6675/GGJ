@@ -6,7 +6,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private float horizontal;
- 
     private float speed = 8f;
     private float jumpingPower = 12f;
     private bool isFacingRight = true;
@@ -40,15 +39,16 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D obj) {
         if (obj.gameObject.CompareTag("ground")){
-            grounded= true;
+            grounded = true;
         }
     }
     private void OnCollisionExit2D(Collision2D obj) {
         if (obj.gameObject.CompareTag("ground"))
         {
-            grounded=false;
+            grounded = false;
         }
     }
+
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
