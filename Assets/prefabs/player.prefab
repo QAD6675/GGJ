@@ -181,8 +181,7 @@ MonoBehaviour:
   currentBallTransform: {fileID: 0}
   animator: {fileID: 5513430234077051398}
   rb: {fileID: 6524184650037100163}
-  playerHealthSys: {fileID: 0}
-  healthSlider: {fileID: 0}
+  playerHealthSys: {fileID: 7147915752054781062}
 --- !u!114 &3928012136096420859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,9 +270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb8b36cdf4b950dc8adee3cbb2b1a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myHealth: 100
+  myHealth: 9
   myDamage: 100
   myResistance: 0
   Damagable: 1
-  myTarget: {fileID: 0}
+  myTarget: {fileID: 7147915752054781062}
   hasTarget: 0

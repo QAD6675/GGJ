@@ -15,8 +15,6 @@ public class Player : MonoBehaviour
     [SerializeField]private Animator animator;
     [SerializeField] private Rigidbody2D rb;
     public HealthSystem playerHealthSys;
-    public Slider healthSlider;     // UI Slider for displaying the health
-
 
 void Start(){
     playerHealthSys= GetComponent<HealthSystem>();
@@ -32,8 +30,6 @@ void Animate(){
 
 private void Update()
 {
-    healthSlider.value = playerHealthSys.getHealth();//update health bar value to health val
-
     Animate();
     if (rolling)
     {
