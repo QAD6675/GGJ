@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
+using System.Runtime;
+using System.Threading;
 using UnityEngine;
 
 
 public class Dog : MonoBehaviour
 {
     public Transform catTransform; 
+    [SerializeField]public HealthSystem playerhs;
     public float sightRange = 10f; 
     public float chaseSpeed = 5f;  
     public float wanderSpeed = 2f; 
@@ -13,10 +17,15 @@ public class Dog : MonoBehaviour
     public float attackRange = 1.5f; 
 
     private Vector3 wanderTarget; 
+    private Animator animator;
+    private HealthSystem hs;
     private bool isChasing = false;
 
     void Start()
     {
+        transform.localScale = new Vector3(8,2f,9f,1);
+        hs = GetComponent<HealthSystem>();
+        animator = GetComponent<Animator>();
         StartCoroutine(Wander());
     }
 
@@ -26,13 +35,21 @@ public class Dog : MonoBehaviour
 
         if (distanceToCat <= sightRange)
         {
+            animator.SetBool("spottedPlayer",true);
+            animator.SetBool("wandering",false);
             isChasing = true;
-            ChaseCat();
+            StartCoroutine(waitForAnimation());
         }
         else
         {
             isChasing = false;
         }
+    }
+    IEnumerator waitForAnimation(){
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("spottedPlayer",false);
+        animator.SetBool("chasingPlayer",true);
+        ChaseCat();
     }
 
     private void ChaseCat()
@@ -50,15 +67,15 @@ public class Dog : MonoBehaviour
             AttackCat();
         }
     }
-
-    private void AttackCat()
-    {
-        //here comes the attack anim
-        Debug.Log("Dog is attacking the cat!");
+    private void AttackCat(){
+            hs.myTarget=playerhs;
+            hs.hasTarget=true;
+            hs.Hit();//attack the target (player)
     }
 
     private IEnumerator Wander()
     {
+        animator.SetBool("wandering",true);
         while (!isChasing)
         {
             wanderTarget = new Vector3(transform.position.x + Random.Range(-wanderRadius, wanderRadius), transform.position.y, transform.position.z);
