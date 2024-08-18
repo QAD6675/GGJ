@@ -1,8 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
-using System.Runtime;
-using System.Threading;
 using UnityEngine;
 
 
@@ -58,9 +55,9 @@ public class Dog : MonoBehaviour
 
         
         if (catTransform.position.x > transform.position.x)
-            transform.localScale = new Vector3(1, 1, 1); 
+            transform.localScale = new Vector3(8.2f,9f,1); 
         else
-            transform.localScale = new Vector3(-1, 1, 1); 
+            transform.localScale = new Vector3(-8.2f,9f,1); 
 
         if (Vector3.Distance(transform.position, catTransform.position) <= attackRange)
         {
@@ -83,9 +80,9 @@ public class Dog : MonoBehaviour
 
          
             if (wanderTarget.x > transform.position.x)
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(8.2f,9f,1);
             else
-                transform.localScale = new Vector3(-1, 1, 1); 
+                transform.localScale = new Vector3(-8.2f,9f,1); 
 
             yield return new WaitForSeconds(Random.Range(2f, 5f));
         }

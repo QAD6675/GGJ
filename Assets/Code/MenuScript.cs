@@ -20,7 +20,7 @@ public class MenuScript : MonoBehaviour
     }
     public void PlayGame()
     {
-        SceneManager.LoadScene("level1");
+        SceneManager.LoadScene("level 1");
     }
 
     public void OpenCreds()
