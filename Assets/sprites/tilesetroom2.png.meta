@@ -303,12 +303,12 @@ TextureImporter:
       name: tilesetroom2_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 430
-        width: 50
-        height: 24
+        x: 293
+        y: 178
+        width: 39
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -324,12 +324,12 @@ TextureImporter:
       name: tilesetroom2_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 414
-        width: 82
-        height: 51
+        x: 336
+        y: 182
+        width: 112
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -345,12 +345,12 @@ TextureImporter:
       name: tilesetroom2_2
       rect:
         serializedVersion: 2
-        x: 167
-        y: 430
-        width: 67
-        height: 49
+        x: 299
+        y: 118
+        width: 28
+        height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -366,12 +366,12 @@ TextureImporter:
       name: tilesetroom2_3
       rect:
         serializedVersion: 2
-        x: 285
-        y: 419
-        width: 18
-        height: 34
+        x: 330
+        y: 156
+        width: 32
+        height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -387,12 +387,12 @@ TextureImporter:
       name: tilesetroom2_4
       rect:
         serializedVersion: 2
-        x: 365
-        y: 451
-        width: 34
-        height: 18
+        x: 384
+        y: 118
+        width: 64
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -408,12 +408,12 @@ TextureImporter:
       name: tilesetroom2_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 430
-        width: 18
-        height: 18
+        x: 348
+        y: 118
+        width: 28
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -429,12 +429,12 @@ TextureImporter:
       name: tilesetroom2_6
       rect:
         serializedVersion: 2
-        x: 315
-        y: 419
-        width: 19
-        height: 18
+        x: 295
+        y: 93
+        width: 64
+        height: 19
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -450,12 +450,12 @@ TextureImporter:
       name: tilesetroom2_7
       rect:
         serializedVersion: 2
-        x: 340
-        y: 419
-        width: 82
-        height: 26
+        x: 366
+        y: 88
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -471,12 +471,12 @@ TextureImporter:
       name: tilesetroom2_8
       rect:
         serializedVersion: 2
-        x: 2
-        y: 383
-        width: 66
-        height: 45
+        x: 197
+        y: 30
+        width: 65
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -492,12 +492,12 @@ TextureImporter:
       name: tilesetroom2_9
       rect:
         serializedVersion: 2
-        x: 81
-        y: 357
-        width: 34
-        height: 56
+        x: 291
+        y: 0
+        width: 128
+        height: 84
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -505,1056 +505,6 @@ TextureImporter:
       bones: []
       spriteID: 08112c77dc587d400800000000000000
       internalID: 348894613668499840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_10
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 311
-        width: 35
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74c053e73bb948b20800000000000000
-      internalID: 3135802435775564871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_11
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 394
-        width: 58
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7c91388ff6b2f090800000000000000
-      internalID: -8002132379266081670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_12
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 339
-        width: 145
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 33c926f2982ecc3b0800000000000000
-      internalID: -5490764766838088653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_13
-      rect:
-        serializedVersion: 2
-        x: 307
-        y: 380
-        width: 147
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80963369fe878a9f0800000000000000
-      internalID: -456982391765636856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_14
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 311
-        width: 82
-        height: 73
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d9239f44215e49280800000000000000
-      internalID: -9037346685596388707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_15
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 362
-        width: 16
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 100dfedea1e6f31d0800000000000000
-      internalID: -3368852934309720063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_16
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 351
-        width: 34
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 195e9d09556d99df0800000000000000
-      internalID: -172871447686290031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_17
-      rect:
-        serializedVersion: 2
-        x: 395
-        y: 323
-        width: 50
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 57d4693047c30dbb0800000000000000
-      internalID: -4913360724487156363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_18
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 311
-        width: 66
-        height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 20c134898b483d7b0800000000000000
-      internalID: -5200667216319407102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_19
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 311
-        width: 18
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a90e96aa6bf186c40800000000000000
-      internalID: 5505685413864005786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_20
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 275
-        width: 150
-        height: 67
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: afa761e71d36946a0800000000000000
-      internalID: -6464526038698919174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_21
-      rect:
-        serializedVersion: 2
-        x: 395
-        y: 275
-        width: 67
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 31dab353dd3ebdd10800000000000000
-      internalID: 2151563786219924755
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_22
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 299
-        width: 18
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22c904798b5db4ed0800000000000000
-      internalID: -2428612585247957982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_23
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 221
-        width: 65
-        height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 65fd124daa004cdd0800000000000000
-      internalID: -2466845962188759210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_24
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 239
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 346943f93ecaf1670800000000000000
-      internalID: 8511711914382104131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_25
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 239
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bbd3da1412921f6c0800000000000000
-      internalID: -4111459762000020037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_26
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 207
-        width: 66
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 768222be010080150800000000000000
-      internalID: 5838916989550209127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_27
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 239
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 466dc0db3d4739420800000000000000
-      internalID: 2635578659700528740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_28
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 239
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6379b71f924826e50800000000000000
-      internalID: 6801143702962804534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_29
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 239
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 07947ba1d36853f50800000000000000
-      internalID: 6860537204368165232
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_30
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 181
-        width: 114
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1a7e90df8db107cd0800000000000000
-      internalID: -2562517569201641567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_31
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 227
-        width: 29
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: efdab980d655f19c0800000000000000
-      internalID: -3954348021023789570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_32
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 205
-        width: 17
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8ccf543197aa86410800000000000000
-      internalID: 1470612715327585480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_33
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 191
-        width: 14
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b1ff104c3a69d2940800000000000000
-      internalID: 5273036368833019675
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_34
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 207
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4f35cee3f30b0e3b0800000000000000
-      internalID: -5485190560452160524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_35
-      rect:
-        serializedVersion: 2
-        x: 292
-        y: 177
-        width: 41
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ff1ab49db9ab0190800000000000000
-      internalID: -7995110081757044745
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_36
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 145
-        width: 67
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: afa1e822bd3d46470800000000000000
-      internalID: 8387061344201743098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_37
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 175
-        width: 34
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6173fa92b5e6e6b40800000000000000
-      internalID: 5435403138103195414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_38
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 143
-        width: 18
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: feaf73509f1377260800000000000000
-      internalID: 7095194683549678319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_39
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 143
-        width: 55
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a5736f1f8afa0e30800000000000000
-      internalID: 4470661072732517797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_40
-      rect:
-        serializedVersion: 2
-        x: 149
-        y: 141
-        width: 24
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3fcc41478460e1230800000000000000
-      internalID: 3611330859452648691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_41
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 117
-        width: 30
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f420a7822ebd30e00800000000000000
-      internalID: 1009892505849299535
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_42
-      rect:
-        serializedVersion: 2
-        x: 329
-        y: 155
-        width: 34
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a92945d434d31f8f0800000000000000
-      internalID: -508557923646664038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_43
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 117
-        width: 33
-        height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6ec29f4e27e19400800000000000000
-      internalID: 329298433864289903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_44
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 93
-        width: 97
-        height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a3f7c54964c4ab10800000000000000
-      internalID: 1991932891625943974
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_45
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 109
-        width: 50
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 31a501cfcc92e5ee0800000000000000
-      internalID: -1270532084492903917
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_46
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 109
-        width: 82
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd032eef9f9acc7e0800000000000000
-      internalID: -1743832064511037219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_47
-      rect:
-        serializedVersion: 2
-        x: 347
-        y: 117
-        width: 30
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b63b26a7667c2300800000000000000
-      internalID: 228687868630611638
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_48
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 79
-        width: 34
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e9e1dfdab09712d50800000000000000
-      internalID: 6710778010829397662
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_49
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 79
-        width: 13
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 28f54e3c13fdb0730800000000000000
-      internalID: 3966509301662769026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_50
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 92
-        width: 66
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bbf084079a7c5ceb0800000000000000
-      internalID: -4700131105544073285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_51
-      rect:
-        serializedVersion: 2
-        x: 365
-        y: 87
-        width: 34
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6506894b3e1882c60800000000000000
-      internalID: 7793621970152087638
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_52
-      rect:
-        serializedVersion: 2
-        x: 401
-        y: 69
-        width: 67
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8758b8689cbe0fbc0800000000000000
-      internalID: -3751239238821378696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_53
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 46
-        width: 37
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d230fff0779f3300800000000000000
-      internalID: 234072217232618197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_54
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 0
-        width: 242
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d56e0527df9ab4b10800000000000000
-      internalID: 1966852568287077981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_55
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 46
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0fe4d001995ef49f0800000000000000
-      internalID: -481914189543289104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_56
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 47
-        width: 34
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3424b3b8fd9c0c8b0800000000000000
-      internalID: -5133881613251558845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_57
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 47
-        width: 18
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 043d0d71ff1426690800000000000000
-      internalID: -7610447856430689472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_58
-      rect:
-        serializedVersion: 2
-        x: 290
-        y: 0
-        width: 130
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4f2b37f1c1237e9e0800000000000000
-      internalID: -1592248846884031756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetroom2_59
-      rect:
-        serializedVersion: 2
-        x: 381
-        y: 117
-        width: 35
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdf8e5572b1531616845abd8127ac204
-      internalID: 1346615714
       vertices: []
       indices: 
       edges: []
@@ -1572,59 +522,10 @@ TextureImporter:
     nameFileIdTable:
       tilesetroom2_0: 4231142617654659877
       tilesetroom2_1: 8840969079546969272
-      tilesetroom2_10: 3135802435775564871
-      tilesetroom2_11: -8002132379266081670
-      tilesetroom2_12: -5490764766838088653
-      tilesetroom2_13: -456982391765636856
-      tilesetroom2_14: -9037346685596388707
-      tilesetroom2_15: -3368852934309720063
-      tilesetroom2_16: -172871447686290031
-      tilesetroom2_17: -4913360724487156363
-      tilesetroom2_18: -5200667216319407102
-      tilesetroom2_19: 5505685413864005786
       tilesetroom2_2: -2206212021885138636
-      tilesetroom2_20: -6464526038698919174
-      tilesetroom2_21: 2151563786219924755
-      tilesetroom2_22: -2428612585247957982
-      tilesetroom2_23: -2466845962188759210
-      tilesetroom2_24: 8511711914382104131
-      tilesetroom2_25: -4111459762000020037
-      tilesetroom2_26: 5838916989550209127
-      tilesetroom2_27: 2635578659700528740
-      tilesetroom2_28: 6801143702962804534
-      tilesetroom2_29: 6860537204368165232
       tilesetroom2_3: -8847257740629261724
-      tilesetroom2_30: -2562517569201641567
-      tilesetroom2_31: -3954348021023789570
-      tilesetroom2_32: 1470612715327585480
-      tilesetroom2_33: 5273036368833019675
-      tilesetroom2_34: -5485190560452160524
-      tilesetroom2_35: -7995110081757044745
-      tilesetroom2_36: 8387061344201743098
-      tilesetroom2_37: 5435403138103195414
-      tilesetroom2_38: 7095194683549678319
-      tilesetroom2_39: 4470661072732517797
       tilesetroom2_4: 1704133914883563976
-      tilesetroom2_40: 3611330859452648691
-      tilesetroom2_41: 1009892505849299535
-      tilesetroom2_42: -508557923646664038
-      tilesetroom2_43: 329298433864289903
-      tilesetroom2_44: 1991932891625943974
-      tilesetroom2_45: -1270532084492903917
-      tilesetroom2_46: -1743832064511037219
-      tilesetroom2_47: 228687868630611638
-      tilesetroom2_48: 6710778010829397662
-      tilesetroom2_49: 3966509301662769026
       tilesetroom2_5: -3744544899658494703
-      tilesetroom2_50: -4700131105544073285
-      tilesetroom2_51: 7793621970152087638
-      tilesetroom2_52: -3751239238821378696
-      tilesetroom2_53: 234072217232618197
-      tilesetroom2_54: 1966852568287077981
-      tilesetroom2_55: -481914189543289104
-      tilesetroom2_56: -5133881613251558845
-      tilesetroom2_57: -7610447856430689472
-      tilesetroom2_58: -1592248846884031756
       tilesetroom2_6: -4183371925967658342
       tilesetroom2_7: 4503357347937141728
       tilesetroom2_8: 3861013319714939757

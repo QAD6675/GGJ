@@ -180,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentBallTransform: {fileID: 0}
   animator: {fileID: 5513430234077051398}
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 696328765805948556}
   rb: {fileID: 6524184650037100163}
   playerHealthSys: {fileID: 7147915752054781062}
 --- !u!114 &3928012136096420859
