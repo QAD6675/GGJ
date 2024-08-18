@@ -6,12 +6,13 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
     public Popup popup;
+    public TMP_Text txt;
 
-    void print(string txt){
+    public void print(string str){
         popup.pop();
-        txt.text=txt;
+        txt.text=str;
     }
-    void clear(){
+    public void clear(){
         popup.close();
     }
 }
