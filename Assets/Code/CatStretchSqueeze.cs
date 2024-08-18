@@ -14,19 +14,23 @@ public class CatStretchSqueeze : MonoBehaviour
     private Vector3 originalScale;
     private float currentStretchValue;
     private bool isResetting = false;
-    private bool var =false;
 
     private void Start()
     {
         originalScale = transform.localScale;
-        currentStretchValue = 1f;
+        currentStretchValue = 1f; // Start with a full stretch bar
         UpdateStretchSlider();
     }
 
     private void Update()
     {
-        HandleSqueezeAndStretch();
+        // Handle squeezing/stretching
+        if (!isResetting)
+        {
+            HandleSqueezeAndStretch();
+        }
 
+        // Regenerate stretch value when not stretching/squeezing
         if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && currentStretchValue < 1f)
         {
             RegenerateStretchValue();
@@ -35,12 +39,13 @@ public class CatStretchSqueeze : MonoBehaviour
 
     private void HandleSqueezeAndStretch()
     {
-        if (currentStretchValue > 0 && !isResetting)
+        // Stretch/squeeze if there's stretch value left
+        if (currentStretchValue > 0)
         {
             if (Input.GetKey(KeyCode.W))
             {
                 StretchY(stretchSpeed);
-                if (!var) DepleteStretchValue();
+                DepleteStretchValue();
             }
             else if (Input.GetKey(KeyCode.S))
             {
@@ -49,56 +54,47 @@ public class CatStretchSqueeze : MonoBehaviour
             }
         }
 
+        // Start resetting if the stretch value is depleted
         if (currentStretchValue <= 0)
         {
-            isResetting = true;
-            ResetScaleGradually();
+            StartCoroutine(ResetScaleGradually());
         }
     }
 
     private void StretchY(float direction)
     {
-        float tmp =transform.localScale.y;
         float newScaleY = Mathf.Clamp(transform.localScale.y + direction * Time.deltaTime, originalScale.y * minScaleY, originalScale.y * maxStretchY);
         transform.localScale = new Vector3(transform.localScale.x, newScaleY, transform.localScale.z);
-        if(tmp == transform.localScale.y){
-            var =true;
-        }else
-        {
-            var= false;
-        }
     }
 
-private void ResetScaleGradually()
-{
-    transform.localScale = Vector3.Lerp(transform.localScale, originalScale, Time.deltaTime * stretchSpeed);
-    if (Vector3.Distance(transform.localScale, originalScale) < 0.01f)
+    private IEnumerator ResetScaleGradually()
     {
-        isResetting = false;
+        isResetting = true;
+
+        while (Vector3.Distance(transform.localScale, originalScale) > 0.01f)
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, originalScale, Time.deltaTime * stretchSpeed);
+            yield return null;
+        }
+
+        // Reset complete, restore the stretch value and stop resetting
+        transform.localScale = originalScale;
         currentStretchValue = 1f;
         UpdateStretchSlider();
+        isResetting = false;
     }
-}
 
     private void DepleteStretchValue()
     {
-        currentStretchValue = Mathf.Clamp01(currentStretchValue - Time.deltaTime * (stretchSpeed / 10f));
+        currentStretchValue = Mathf.Clamp01(currentStretchValue - Time.deltaTime * (stretchSpeed / 2f)); // Adjusted depletion speed
         UpdateStretchSlider();
     }
 
-private void RegenerateStretchValue()
-{
-    if (currentStretchValue <= 0)
+    private void RegenerateStretchValue()
     {
-        isResetting = true;
-        ResetScaleGradually();
-    }
-    else
-    {
-        currentStretchValue = Mathf.Clamp01(currentStretchValue + Time.deltaTime * (barRegenSpeed / 10f));
+        currentStretchValue = Mathf.Clamp01(currentStretchValue + Time.deltaTime * (barRegenSpeed / 2f)); // Adjusted regeneration speed
         UpdateStretchSlider();
     }
-}
 
     private void UpdateStretchSlider()
     {
