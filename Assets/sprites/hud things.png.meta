@@ -660,7 +660,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hud things_0: 8113065106875862737
+      hud things_1: -3235352078370438132
+      hud things_10: 2541945296383253928
+      hud things_11: 5637047353605358658
+      hud things_12: 3626682291281597310
+      hud things_13: 6137487473045586905
+      hud things_14: -9022864194092890511
+      hud things_15: 1962195108142845975
+      hud things_16: 6214268581571571608
+      hud things_17: 128353043374678015
+      hud things_18: 6544011520236919629
+      hud things_19: -6147481386016685465
+      hud things_2: -2866244852247937632
+      hud things_20: 4200436118322143222
+      hud things_21: -7364077795314116293
+      hud things_3: 5777767991120982060
+      hud things_4: 593215622811340681
+      hud things_5: 2822744051499658681
+      hud things_6: 1606753425120854569
+      hud things_7: -5595504334527487047
+      hud things_8: 8611401741633001786
+      hud things_9: 3789214938911851938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
