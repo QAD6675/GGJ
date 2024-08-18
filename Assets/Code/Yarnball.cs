@@ -7,6 +7,7 @@ public class Yarnball : MonoBehaviour
     [SerializeField] private float rotationSpeed = 50f;
     [SerializeField] private SpriteRenderer sr;
     private bool rolling=false;
+    private bool hasCat = false;
 
     void Start(){
         sr = GetComponent<SpriteRenderer>();
@@ -16,6 +17,7 @@ public class Yarnball : MonoBehaviour
     {
         if (other.gameObject.CompareTag("ground"))
         {
+            if(!hasCat)return;
             if(rolling)return;
             if (goingRight)
             {
@@ -28,14 +30,17 @@ public class Yarnball : MonoBehaviour
         }
     }
     public void caughtCat(){
+        hasCat=true;
         sr.enabled=false;
     }
     public void releasetCat(){
+        hasCat=false;
         Destroy(this);
     }
 
     void Update()
     {
+        if (!hasCat)return;
         if (goingRight)
         {
             transform.Rotate(Vector3.forward * Time.deltaTime * rotationSpeed);
