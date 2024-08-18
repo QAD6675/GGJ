@@ -6,18 +6,18 @@ using UnityEngine.AI;
 public class Dog : MonoBehaviour
 {
     public Transform player;
-    private NavMeshAgent navMeshAgent;
+    // private NavMeshAgent navMeshAgent;
 
     private void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        // navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
     {
         if (player != null)
         {
-            navMeshAgent.SetDestination(player.position);
+            // navMeshAgent.SetDestination(player.position);
         }
     }
 }

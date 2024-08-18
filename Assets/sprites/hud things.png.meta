@@ -100,7 +100,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -189,15 +189,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hud things_0
+      name: menuitem1
       rect:
         serializedVersion: 2
         x: 0
-        y: 264
-        width: 26
-        height: 18
+        y: 273
+        width: 23
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,7 +210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_1
+      name: menuitem3
       rect:
         serializedVersion: 2
         x: 0
@@ -218,7 +218,7 @@ TextureImporter:
         width: 28
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,15 +231,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_2
+      name: menuitem2
       rect:
         serializedVersion: 2
-        x: 38
-        y: 229
-        width: 26
-        height: 53
+        x: 0
+        y: 265
+        width: 25
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,7 +252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_3
+      name: menuitem4
       rect:
         serializedVersion: 2
         x: 0
@@ -260,7 +260,7 @@ TextureImporter:
         width: 31
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,7 +273,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_4
+      name: menuitem5
       rect:
         serializedVersion: 2
         x: 0
@@ -281,7 +281,7 @@ TextureImporter:
         width: 18
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,7 +294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_5
+      name: menuitem6
       rect:
         serializedVersion: 2
         x: 0
@@ -302,7 +302,7 @@ TextureImporter:
         width: 21
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,7 +315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_6
+      name: life1
       rect:
         serializedVersion: 2
         x: 1
@@ -323,7 +323,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,7 +336,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_7
+      name: life2
       rect:
         serializedVersion: 2
         x: 17
@@ -344,7 +344,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,7 +357,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_8
+      name: life3
       rect:
         serializedVersion: 2
         x: 33
@@ -365,7 +365,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,7 +378,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_9
+      name: life4
       rect:
         serializedVersion: 2
         x: 49
@@ -386,7 +386,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,7 +399,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_10
+      name: life5
       rect:
         serializedVersion: 2
         x: 65
@@ -407,7 +407,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,7 +420,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_11
+      name: life6
       rect:
         serializedVersion: 2
         x: 81
@@ -428,7 +428,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,7 +441,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_12
+      name: life7
       rect:
         serializedVersion: 2
         x: 1
@@ -449,7 +449,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -462,7 +462,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_13
+      name: life8
       rect:
         serializedVersion: 2
         x: 17
@@ -470,7 +470,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -483,7 +483,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_14
+      name: life9
       rect:
         serializedVersion: 2
         x: 33
@@ -491,7 +491,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -504,7 +504,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_15
+      name: life0
       rect:
         serializedVersion: 2
         x: 49
@@ -512,7 +512,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -525,7 +525,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_16
+      name: bar0
       rect:
         serializedVersion: 2
         x: 0
@@ -533,7 +533,7 @@ TextureImporter:
         width: 97
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -546,7 +546,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_17
+      name: bar 20
       rect:
         serializedVersion: 2
         x: 0
@@ -554,7 +554,7 @@ TextureImporter:
         width: 97
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -567,7 +567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_18
+      name: bar40
       rect:
         serializedVersion: 2
         x: 0
@@ -575,7 +575,7 @@ TextureImporter:
         width: 97
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -588,7 +588,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_19
+      name: bar60
       rect:
         serializedVersion: 2
         x: 0
@@ -596,7 +596,7 @@ TextureImporter:
         width: 97
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -609,7 +609,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_20
+      name: bar80
       rect:
         serializedVersion: 2
         x: 0
@@ -617,7 +617,7 @@ TextureImporter:
         width: 97
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -630,7 +630,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hud things_21
+      name: bar100
       rect:
         serializedVersion: 2
         x: 0
@@ -638,7 +638,7 @@ TextureImporter:
         width: 97
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -653,14 +653,36 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 341186bfbd7d5766bbd93bb79d6ffa12
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bar 20: 128353043374678015
+      bar0: 6214268581571571608
+      bar100: -7364077795314116293
+      bar40: 6544011520236919629
+      bar60: -6147481386016685465
+      bar80: 4200436118322143222
+      life0: 1962195108142845975
+      life1: 1606753425120854569
+      life2: -5595504334527487047
+      life3: 8611401741633001786
+      life4: 3789214938911851938
+      life5: 2541945296383253928
+      life6: 5637047353605358658
+      life7: 3626682291281597310
+      life8: 6137487473045586905
+      life9: -9022864194092890511
+      menuitem1: 8113065106875862737
+      menuitem2: -2866244852247937632
+      menuitem3: -3235352078370438132
+      menuitem4: 5777767991120982060
+      menuitem5: 593215622811340681
+      menuitem6: 2822744051499658681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

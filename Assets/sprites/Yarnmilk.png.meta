@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2f957bc0d2b64507a97aa97b86411908
+guid: c8298f3433d1950ed84409f10f96ef9e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -630575523452681867
-    second: yarn_0
+      213: 4861102206483562691
+    second: Yarnmilk_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -126,22 +126,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yarn_0
+      name: Yarnmilk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 204
-        height: 192
+        x: 16
+        y: 3
+        width: 16
+        height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5710c8007eebf37f0800000000000000
-      internalID: -630575523452681867
+      spriteID: 3c0025a93ba167340800000000000000
+      internalID: 4861102206483562691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yarnmilk_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 16
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5854701, y: 0.5042078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e265a5109c0c29a14b9acd04802954b9
+      internalID: -1354764173
       vertices: []
       indices: 
       edges: []
@@ -149,14 +170,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9a063c425a52ab3188964c5c947c2152
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Yarnmilk_1: -1354764173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
