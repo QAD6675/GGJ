@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 void Start(){
     playerHealthSys= GetComponent<HealthSystem>();
     dialogueManager= GetComponent<DialogueManager>();//if you need it use saySomething(int);
+    dialogueManager.saySomething(0);
 }
 
 void Animate(){

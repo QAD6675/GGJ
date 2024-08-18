@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField]private TextAsset dialoguesFile;
-    [SerializeField]private Text textDisplay;
+    [SerializeField]private TMP_Text textDisplay;
     String[] dialogues;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,7 @@ public class DialogueManager : MonoBehaviour
         textDisplay.enabled=false;
         // textDisplay.text =dialogues[0];
     }
-    void saySomething(int index){
+    public void saySomething(int index){
         textDisplay.enabled=true;
         textDisplay.text =dialogues[index];
     }
