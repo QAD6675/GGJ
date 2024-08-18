@@ -13,11 +13,13 @@ public class Player : MonoBehaviour
     private bool rolling =false;
     [SerializeField]private Transform currentBallTransform;
     [SerializeField]private Animator animator;
+    [SerializeField]private DialogueManager dialogueManager;
     [SerializeField] private Rigidbody2D rb;
     public HealthSystem playerHealthSys;
 
 void Start(){
     playerHealthSys= GetComponent<HealthSystem>();
+    dialogueManager= GetComponent<DialogueManager>();//if you need it use saySomething(int);
 }
 
 void Animate(){
@@ -45,10 +47,10 @@ private void Update()
         animator.SetBool("grounded", false);
         grounded = false;
     }
-    if (Input.GetKeyDown(KeyCode.Q))
-    {
-        playerHealthSys.Hit();
-    }
+    // if (Input.GetKeyDown(KeyCode.Q))
+    // {
+    //     playerHealthSys.Hit();
+    // }
 
     if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
     {
@@ -79,13 +81,13 @@ private void Update()
             rolling =true;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other) {
-        playerHealthSys.myTarget=other.gameObject.GetComponent<HealthSystem>();
-        playerHealthSys.hasTarget=true;
-    }
-    private void OnTriggerExit2D(Collider2D other) {
-        playerHealthSys.hasTarget=false;
-    }
+    // private void OnTriggerEnter2D(Collider2D other) {
+    //     playerHealthSys.myTarget=other.gameObject.GetComponent<HealthSystem>();
+    //     playerHealthSys.hasTarget=true;
+    // }
+    // private void OnTriggerExit2D(Collider2D other) {
+    //     playerHealthSys.hasTarget=false;
+    // }
 
     private void Flip()
     {
