@@ -9,6 +9,7 @@ public class Popup : MonoBehaviour
 
     public void pop()
     {
+        gameObject.SetActive(true);
         // Initialize the initial scale of the popup
         transform.localScale = new Vector3(1f,1f,1f);
         initialScale = transform.localScale;
@@ -43,7 +44,7 @@ public  void close(){
         // Loop until the popup is fully shrunk
         while (Vector3.Distance(transform.localScale,targetScale)>0.9f)
         {
-        Debug.Log(Vector3.Distance(transform.localScale,targetScale));
+        // Debug.Log(Vector3.Distance(transform.localScale,targetScale));
             // Shrink the popup towards the target scale
             transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime*6f);
             yield return null;

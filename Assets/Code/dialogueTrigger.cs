@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class dialogueTrigger : MonoBehaviour
 {
+    //this only stores data
     public Player player;
-    public int dialogueIndex;
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "player") {
-            player.triggerDialogue(dialogueIndex);
-        }
-    }
+    public bool spoken=false;
+    public int start;
+    public int end;
+
 }

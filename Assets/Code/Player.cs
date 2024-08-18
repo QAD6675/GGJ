@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField]private Animator animator;
     [SerializeField]private DialogueManager dialogueManager;
     public BoxCollider2D collider;
-    public float readTime=5f;
+    public float readTime=6f;
     private bool talking= false;
     [SerializeField] private Rigidbody2D rb;
     public HealthSystem playerHealthSys;
@@ -25,15 +25,22 @@ void Start(){
     playerHealthSys= GetComponent<HealthSystem>();
     dialogueManager= GetComponent<DialogueManager>();//if you need it use saySomething(int);
 }
-    public void triggerDialogue(int i){
+    public void triggerDialogue(int start,int end){
         talking=true;
-        dialogueManager.saySomething(i);
-        StartCoroutine(shutUp());
+        rb.velocity= new Vector2(0f,0f);
+        dialogueManager.saySomething(start);
+        if (start==end) {
+            StartCoroutine(shutUp(true,start,end));
+        }else{   
+            StartCoroutine(shutUp(false,start,end));
+        }
     }
-    IEnumerator shutUp(){
+    IEnumerator shutUp(bool last,int start,int end){
         yield return new WaitForSeconds(readTime);
         dialogueManager.clearDialogue();
         talking=false;
+        yield return new WaitForSeconds(0.5f);
+        if (!last) triggerDialogue(start+1,end);
     }
 void Animate(){
     if (horizontal == 0f){
@@ -45,7 +52,10 @@ void Animate(){
 
 private void Update()
 {
-    if (talking )return;
+    if (talking){
+        animator.SetBool("walking", false);
+        return;
+    }
     Animate();
     if (rolling)
     {
@@ -81,11 +91,12 @@ private void Update()
 
     private void FixedUpdate()
     {
+        if(rolling||talking)return;
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
     private void OnCollisionEnter2D(Collision2D obj) {
-        if (obj.gameObject.CompareTag("ground") && !rb.velocity.y>0f){
+        if (obj.gameObject.CompareTag("ground")){
             animator.SetBool("grounded", true);
             grounded = true;
         }
@@ -106,14 +117,14 @@ private void Update()
         collider.isTrigger=false; //FIXME
         currentYarnBall.releasetCat();
     }
-    // private void OnTriggerEnter2D(Collider2D other) {
-    //     playerHealthSys.myTarget=other.gameObject.GetComponent<HealthSystem>();
-    //     playerHealthSys.hasTarget=true;
-    // }
-    // private void OnTriggerExit2D(Collider2D other) {
-    //     playerHealthSys.hasTarget=false;
-    // }
-
+    private void OnTriggerEnter2D(Collider2D obj) {
+       if (obj.gameObject.tag == "dialogueTrigger") {
+            dialogueTrigger dt =obj.gameObject.GetComponent<dialogueTrigger>();
+            if (dt.spoken) return;
+            dt.spoken=true;
+            triggerDialogue(dt.start,dt.end);
+        }
+    }
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
