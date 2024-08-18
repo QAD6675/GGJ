@@ -23,7 +23,7 @@ public class Dog : MonoBehaviour
 
     void Start()
     {
-        transform.localScale = new Vector3(8,2f,9f,1);
+        transform.localScale = new Vector3(8.2f,9f,1);
         hs = GetComponent<HealthSystem>();
         animator = GetComponent<Animator>();
         StartCoroutine(Wander());
