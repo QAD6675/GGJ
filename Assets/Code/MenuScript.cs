@@ -8,9 +8,9 @@ using TMPro;
 public class MenuScript : MonoBehaviour
 {
 
-    public TMP_Button playButton;
-    public TMP_Button quitButton;
-    public TMP_Button credsButton;
+    public Button playButton;
+    public Button quitButton;
+    public Button credsButton;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class MenuScript : MonoBehaviour
     }
     public void PlayGame()
     {
-        SceneManager.LoadScene("level 1");
+        SceneManager.LoadScene("level1");
     }
 
     public void OpenCreds()
