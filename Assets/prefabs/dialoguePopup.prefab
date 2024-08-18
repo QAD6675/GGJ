@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 3938916778535420121}
   - component: {fileID: 653886179685693942}
   - component: {fileID: 205932797335743910}
+  - component: {fileID: 7143574421927524932}
   m_Layer: 5
   m_Name: dialoguePopup
   m_TagString: Untagged
@@ -239,4 +240,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e3acad609513beeb6226c93e64d691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrinkDuration: 0.4
+  readDuration: 5
+--- !u!114 &7143574421927524932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8969593309841071442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bba941d02500c6a8c8fb3e6d89df82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popup: {fileID: 205932797335743910}
+  txt: {fileID: 5288237311375253266}

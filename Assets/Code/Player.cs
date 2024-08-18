@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField]private Animator animator;
     [SerializeField]private DialogueManager dialogueManager;
     public BoxCollider2D collider;
+    public float readTime=5f;
     private bool talking= false;
     [SerializeField] private Rigidbody2D rb;
     public HealthSystem playerHealthSys;
@@ -23,15 +24,14 @@ public class Player : MonoBehaviour
 void Start(){
     playerHealthSys= GetComponent<HealthSystem>();
     dialogueManager= GetComponent<DialogueManager>();//if you need it use saySomething(int);
-    Speak(0);
 }
-    void Speak(int i){
+    public void triggerDialogue(int i){
         talking=true;
         dialogueManager.saySomething(i);
         StartCoroutine(shutUp());
     }
     IEnumerator shutUp(){
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(readTime);
         dialogueManager.clearDialogue();
         talking=false;
     }
@@ -85,7 +85,7 @@ private void Update()
     }
 
     private void OnCollisionEnter2D(Collision2D obj) {
-        if (obj.gameObject.CompareTag("ground")){
+        if (obj.gameObject.CompareTag("ground") && !rb.velocity.y>0f){
             animator.SetBool("grounded", true);
             grounded = true;
         }
