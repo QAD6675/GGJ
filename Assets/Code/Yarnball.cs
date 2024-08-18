@@ -19,11 +19,11 @@ public class Yarnball : MonoBehaviour
             if(rolling)return;
             if (goingRight)
             {
-                rb.AddForce(new Vector2(7f, 0f), ForceMode2D.Impulse);
+                rb.AddForce(new Vector2(3f, 0f), ForceMode2D.Impulse);
             }
             else
             {
-                rb.AddForce(new Vector2(-7f, 0f), ForceMode2D.Impulse);
+                rb.AddForce(new Vector2(-3f, 0f), ForceMode2D.Impulse);
             }
         }
     }
@@ -31,7 +31,7 @@ public class Yarnball : MonoBehaviour
         sr.enabled=false;
     }
     public void releasetCat(){
-        enabled=false;
+        Destroy(this);
     }
 
     void Update()

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5513430234077051398}
   - component: {fileID: 7147915752054781062}
   - component: {fileID: 696328765805948556}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,9 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb920567297f19e68e7834f1afcdfb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentBallTransform: {fileID: 0}
   animator: {fileID: 5513430234077051398}
   dialogueManager: {fileID: 696328765805948556}
+  collider: {fileID: 6224622027824481510}
   rb: {fileID: 6524184650037100163}
   playerHealthSys: {fileID: 7147915752054781062}
 --- !u!114 &3928012136096420859

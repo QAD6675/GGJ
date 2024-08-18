@@ -11,9 +11,11 @@ public class Player : MonoBehaviour
     private bool isFacingRight = true;
     private bool grounded = false;
     private bool rolling =false;
-    [SerializeField]private Transform currentBallTransform;
+    private Yarnball currentYarnBall;
+    private Transform currentBallTransform;
     [SerializeField]private Animator animator;
     [SerializeField]private DialogueManager dialogueManager;
+    public BoxCollider2D collider;
     [SerializeField] private Rigidbody2D rb;
     public HealthSystem playerHealthSys;
 
@@ -77,10 +79,21 @@ private void Update()
             grounded = true;
         }
         if (obj.gameObject.CompareTag("yarnball")){
+            currentYarnBall=obj.gameObject.GetComponent<Yarnball>();
             currentBallTransform=obj.gameObject.GetComponent<Transform>();
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            animator.SetBool("trapped",true);
+            collider.isTrigger = true;
+            currentYarnBall.caughtCat();
             rolling =true;
+            StartCoroutine("escape");
         }
+    }
+    IEnumerator escape(){
+        yield return new WaitForSeconds(2f);
+        rolling =false;
+        animator.SetBool("trapped",false);
+        collider.isTrigger=false; //FIXME
+        currentYarnBall.releasetCat();
     }
     // private void OnTriggerEnter2D(Collider2D other) {
     //     playerHealthSys.myTarget=other.gameObject.GetComponent<HealthSystem>();
