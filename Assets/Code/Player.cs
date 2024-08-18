@@ -16,15 +16,25 @@ public class Player : MonoBehaviour
     [SerializeField]private Animator animator;
     [SerializeField]private DialogueManager dialogueManager;
     public BoxCollider2D collider;
+    private bool talking= false;
     [SerializeField] private Rigidbody2D rb;
     public HealthSystem playerHealthSys;
 
 void Start(){
     playerHealthSys= GetComponent<HealthSystem>();
     dialogueManager= GetComponent<DialogueManager>();//if you need it use saySomething(int);
-    dialogueManager.saySomething(0);
+    Speak(0);
 }
-
+    void Speak(int i){
+        talking=true;
+        dialogueManager.saySomething(i);
+        StartCoroutine(shutUp());
+    }
+    IEnumerator shutUp(){
+        yield return new WaitForSeconds(5f);
+        dialogueManager.clearDialogue();
+        talking=false;
+    }
 void Animate(){
     if (horizontal == 0f){
         animator.SetBool("walking", false);
@@ -35,6 +45,7 @@ void Animate(){
 
 private void Update()
 {
+    if (talking )return;
     Animate();
     if (rolling)
     {

@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 1085445935425842542}
   - component: {fileID: 3938916778535420121}
   - component: {fileID: 653886179685693942}
+  - component: {fileID: 205932797335743910}
   m_Layer: 5
   m_Name: dialoguePopup
   m_TagString: Untagged
@@ -164,7 +165,7 @@ RectTransform:
   m_GameObject: {fileID: 8969593309841071442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1.7, z: 2}
+  m_LocalScale: {x: 0.24, y: 0.18, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8170269235170381481}
@@ -224,5 +225,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetFollow: {fileID: 0}
   yClamp: {x: 0, y: 0}
-  xClamp: {x: 0, y: 0}
+  xOffset: 5
   smoothSpeed: 0.125
+--- !u!114 &205932797335743910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8969593309841071442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e3acad609513beeb6226c93e64d691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrinkDuration: 0.4
