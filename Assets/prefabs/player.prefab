@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6524184650037100163}
   - component: {fileID: 6224622027824481510}
   - component: {fileID: 3707100757447890164}
-  - component: {fileID: 3928012136096420859}
   - component: {fileID: 5513430234077051398}
   - component: {fileID: 7147915752054781062}
   - component: {fileID: 696328765805948556}
@@ -184,23 +183,6 @@ MonoBehaviour:
   readTime: 4.7
   rb: {fileID: 6524184650037100163}
   playerHealthSys: {fileID: 7147915752054781062}
---- !u!114 &3928012136096420859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1226915019383471063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 470d90a6d37f028498a5700f384233f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stretchSpeed: 2
-  maxStretchY: 2
-  minScaleY: 0.5
-  barRegenSpeed: 1
-  stretchSlider: {fileID: 0}
 --- !u!95 &5513430234077051398
 Animator:
   serializedVersion: 7
