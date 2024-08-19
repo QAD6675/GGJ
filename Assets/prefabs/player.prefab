@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6224622027824481510}
   - component: {fileID: 5513430234077051398}
   - component: {fileID: 2857967845114467276}
+  - component: {fileID: 5373786823528666600}
   m_Layer: 3
   m_Name: player
   m_TagString: Untagged
@@ -197,9 +198,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb920567297f19e68e7834f1afcdfb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  dialogueManager: {fileID: 0}
-  collider: {fileID: 0}
+  data: {fileID: 0}
+  hud: {fileID: 0}
+  animator: {fileID: 5513430234077051398}
+  dialogueManager: {fileID: 5373786823528666600}
+  lives: 0
+  collider: {fileID: 6224622027824481510}
   readTime: 6
-  rb: {fileID: 0}
-  playerHealthSys: {fileID: 0}
+  currentlevel: 1
+  rb: {fileID: 6524184650037100163}
+--- !u!114 &5373786823528666600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226915019383471063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc0e206e6135e759cb861e30e12d0643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguesFile: {fileID: 4900000, guid: bbaf0441d21ef818b97a3f2d2d7919e4, type: 3}
+  dialogue: {fileID: 0}

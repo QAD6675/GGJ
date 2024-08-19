@@ -961,6 +961,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: catHUD
       objectReference: {fileID: 0}
+    - target: {fileID: 1637246684098825840, guid: c5f177db73d6293a584212456dea9c3b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3597903531602953216, guid: c5f177db73d6293a584212456dea9c3b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4208,7 +4212,7 @@ GameObject:
   - component: {fileID: 1867486414}
   m_Layer: 0
   m_Name: tilesetroom2_10
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
