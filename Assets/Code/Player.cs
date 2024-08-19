@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public dataStore data;
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 12f;
@@ -18,7 +17,6 @@ public class Player : MonoBehaviour
     [SerializeField]private CatHUD hud;
     [SerializeField]private Animator animator;
     [SerializeField]private DialogueManager dialogueManager;
-    public int lives;
     public BoxCollider2D collider;
     public float readTime=6f;
     public int currentlevel=1;
@@ -26,7 +24,6 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
 void Start(){
-    lives=data.lives;
     dialogueManager= GetComponent<DialogueManager>();//if you need it use saySomething(int);
 }
     public void triggerDialogue(int start,int end){
@@ -47,10 +44,6 @@ void Start(){
         if (!last) triggerDialogue(start+1,end);
     }
     public void Die(){
-        if (lives==1){
-            SceneManager.LoadScene("level 1");
-            Destroy(data);
-        }
         hud.LoseLife();
         SceneManager.LoadScene("prototype");
     }
@@ -106,6 +99,9 @@ private void Update()
         if (obj.gameObject.CompareTag("ground")){
             animator.SetBool("grounded", true);
             grounded = true;
+        }
+        if (obj.gameObject.CompareTag("dog")){
+            Die();
         }
         if (obj.gameObject.CompareTag("yarnball")){
             currentYarnBall=obj.gameObject.GetComponent<Yarnball>();

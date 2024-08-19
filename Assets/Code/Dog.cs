@@ -6,13 +6,10 @@ using UnityEngine;
 public class Dog : MonoBehaviour
 {
     public Transform catTransform; 
-    [SerializeField]public Player player;
     public float sightRange = 10f; 
     public float chaseSpeed = 5f;  
     public float wanderSpeed = 2f; 
     public float wanderRadius = 5f; 
-    public float attackRange = 1.5f; 
-
     private Vector3 wanderTarget; 
     private Animator animator;
     private bool isChasing = false;
@@ -57,15 +54,7 @@ public class Dog : MonoBehaviour
         else
             transform.localScale = new Vector3(-8.2f,9f,1); 
 
-        if (Vector3.Distance(transform.position, catTransform.position) <= attackRange)
-        {
-            AttackCat();
-        }
     }
-    private void AttackCat(){
-        player.Die();
-    }
-
     private IEnumerator Wander()
     {
         animator.SetBool("wandering",true);

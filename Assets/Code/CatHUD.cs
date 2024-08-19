@@ -1,38 +1,40 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class CatHUD : MonoBehaviour
 {
-    public Image catImage;               
+    public Image catImage;            
     public TMP_Text livesText;           
     public Sprite[] catSprites;          
-    public int maxLives = 9;       
-
-    private int currentLives;
+    public int maxLives = 9;      
 
     void Start()
     {
-        
-        currentLives = maxLives;
         UpdateHUD();
     }
 
     
     public void LoseLife()
     {
-        if (currentLives > 0)
+        if (dataStore.instance.lives == 1){
+            dataStore.instance.lives=9;
+            SceneManager.LoadScene(1);
+            return;
+        }
+        if (dataStore.instance.lives> 0)
         {
-            currentLives--;
+            dataStore.instance.lives--;
             UpdateHUD();
         }
     }
 
     public void GainLife()
     {
-        if (currentLives < maxLives)
+        if (dataStore.instance.lives < maxLives)
         {
-            currentLives++;
+            dataStore.instance.lives++;
             UpdateHUD();
         }
     }
@@ -41,9 +43,9 @@ public class CatHUD : MonoBehaviour
     private void UpdateHUD()
     {
         
-        catImage.sprite = catSprites[Mathf.Clamp(currentLives - 1, 0, catSprites.Length - 1)];
+        catImage.sprite = catSprites[dataStore.instance.lives-1];
 
         
-        livesText.text = currentLives.ToString();
+        livesText.text = dataStore.instance.lives.ToString();
     }
 }

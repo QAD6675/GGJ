@@ -6,7 +6,7 @@ public class dataStore : MonoBehaviour
 {
     public int lives = 9;
 
-    private static dataStore instance;
+    public static dataStore instance;
 
     private void Awake()
     {
