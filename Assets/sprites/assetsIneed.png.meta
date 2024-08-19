@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: assetsIneed_0
+      name: assetsIneed_3
       rect:
         serializedVersion: 2
         x: 19
@@ -134,7 +134,7 @@ TextureImporter:
         width: 22
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: assetsIneed_1
+      name: assetsIneed_2
       rect:
         serializedVersion: 2
         x: 53
@@ -155,7 +155,7 @@ TextureImporter:
         width: 21
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: assetsIneed_2
+      name: assetsIneed_0
       rect:
         serializedVersion: 2
         x: 117
@@ -176,7 +176,7 @@ TextureImporter:
         width: 5
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,9 +199,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      assetsIneed_0: 2583198073511891444
-      assetsIneed_1: 1867658726
-      assetsIneed_2: -1833008485
+      assetsIneed_0: -1833008485
+      assetsIneed_2: 1867658726
+      assetsIneed_3: 2583198073511891444
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
