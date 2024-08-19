@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 1637246684098825840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.08625, y: 1.08625, z: 1.08625}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8161845139054106442}
@@ -241,6 +241,10 @@ PrefabInstance:
       propertyPath: xOffset
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 653886179685693942, guid: 4d81db61666931a359bddd02c2f78b48, type: 3}
+      propertyPath: yOffset
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1210814526835513348, guid: 4d81db61666931a359bddd02c2f78b48, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -274,6 +278,14 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1210814526835513348, guid: 4d81db61666931a359bddd02c2f78b48, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210814526835513348, guid: 4d81db61666931a359bddd02c2f78b48, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1210814526835513348, guid: 4d81db61666931a359bddd02c2f78b48, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -283,7 +295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1210814526835513348, guid: 4d81db61666931a359bddd02c2f78b48, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1210814526835513348, guid: 4d81db61666931a359bddd02c2f78b48, type: 3}
       propertyPath: m_LocalRotation.w
@@ -320,6 +332,10 @@ PrefabInstance:
     - target: {fileID: 1210814526835513348, guid: 4d81db61666931a359bddd02c2f78b48, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288237311375253266, guid: 4d81db61666931a359bddd02c2f78b48, type: 3}
+      propertyPath: m_text
+      value: we fucked up
       objectReference: {fileID: 0}
     - target: {fileID: 8969593309841071442, guid: 4d81db61666931a359bddd02c2f78b48, type: 3}
       propertyPath: m_Name
