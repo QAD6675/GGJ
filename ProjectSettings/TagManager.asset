@@ -11,6 +11,8 @@ TagManager:
   - NegativeCollectable
   - dog
   - spring
+  - Ryarnball
+  - Lyarnball
   layers:
   - Default
   - TransparentFX

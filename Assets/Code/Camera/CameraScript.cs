@@ -6,6 +6,7 @@ public class CameraScript : MonoBehaviour
 {
     [SerializeField] Transform targetFollow;    // Target to follow
     [SerializeField] Vector2 yClamp;            // Y-axis clamping limits
+    [SerializeField] Vector2 xClamp;            // Y-axis clamping limits
     [SerializeField] float smoothSpeed = 0.125f; // Speed of camera movement
 
     private void FixedUpdate()
@@ -15,7 +16,8 @@ public class CameraScript : MonoBehaviour
 
         // Clamp the desired position's y value
         float clampedY = Mathf.Clamp(desiredPosition.y, yClamp.x, yClamp.y);
-        desiredPosition = new Vector3(desiredPosition.x, clampedY, desiredPosition.z);
+        float clampedX = Mathf.Clamp(desiredPosition.x, xClamp.x, xClamp.y);
+        desiredPosition = new Vector3(clampedX, clampedY, desiredPosition.z);
 
         // Smoothly interpolate between the camera's current position and the desired position
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);

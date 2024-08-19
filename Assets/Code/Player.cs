@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     [SerializeField]private DialogueManager dialogueManager;
     public BoxCollider2D collider;
     public float readTime=6f;
-    public int currentlevel=1;
+    private bool right;
     private bool talking= false;
     [SerializeField] private Rigidbody2D rb;
 
@@ -86,7 +86,12 @@ private void Update()
     Animate();
     if (rolling)
     {
-        transform.Rotate(0f,0f,1f);
+        if (right)
+        {
+        transform.Rotate(0f,0f,-2f);
+        }else{
+        transform.Rotate(0f,0f,2f);
+        }
         return;
     }
 
@@ -152,8 +157,16 @@ private void Update()
             DecreaseSize();
             Destroy(obj.gameObject); // Destroy the collectable after collection
         }
-        if (obj.gameObject.CompareTag("yarnball")){
+        if (obj.gameObject.CompareTag("Ryarnball")){
             animator.SetBool("trapped",true);
+            rolling =true;
+            right=true;
+            StartCoroutine("escape");
+            Destroy(obj.gameObject); 
+        }
+        if (obj.gameObject.CompareTag("Lyarnball")){
+            animator.SetBool("trapped",true);
+            right=false;
             rolling =true;
             StartCoroutine("escape");
             Destroy(obj.gameObject); 
