@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1432803666651416904}
   - component: {fileID: 6040125413395387380}
   - component: {fileID: 4712027772681668070}
-  - component: {fileID: -9073503860032035836}
   - component: {fileID: -1315441350009288295}
   m_Layer: 0
   m_Name: PosvCollectable
@@ -135,21 +134,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-9073503860032035836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6340336264941921266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff769f87cf7a89e42b2fdc4918558d77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sizeIncreaseAmount: 0.2
-  minSize: 0.5
-  maxSize: 2
 --- !u!50 &-1315441350009288295
 Rigidbody2D:
   serializedVersion: 4

@@ -198,11 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb920567297f19e68e7834f1afcdfb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
   hud: {fileID: 0}
   animator: {fileID: 5513430234077051398}
   dialogueManager: {fileID: 5373786823528666600}
-  lives: 0
   collider: {fileID: 6224622027824481510}
   readTime: 6
   currentlevel: 1

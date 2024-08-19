@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &578439867405071942
 RectTransform:
   m_ObjectHideFlags: 0
@@ -118,7 +118,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   catImage: {fileID: 1450810414756812551}
   livesText: {fileID: 3729124645005049005}
-  catSprites: []
+  catSprites:
+  - {fileID: -9022864194092890511, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 6137487473045586905, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 3626682291281597310, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 5637047353605358658, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 2541945296383253928, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 3789214938911851938, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 8611401741633001786, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: -5595504334527487047, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 1606753425120854569, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
   maxLives: 9
 --- !u!1 &4678480812184934135
 GameObject:

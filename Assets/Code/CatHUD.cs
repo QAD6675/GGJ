@@ -20,7 +20,7 @@ public class CatHUD : MonoBehaviour
     {
         if (dataStore.instance.lives == 1){
             dataStore.instance.lives=maxLives;
-            SceneManager.LoadScene("level 1");
+            SceneManager.LoadScene("level 1"); //FIXME
             return;
         }
         if (dataStore.instance.lives> 0)
