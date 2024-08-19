@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public dataStore data;
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 12f;
@@ -13,16 +15,18 @@ public class Player : MonoBehaviour
     private bool rolling =false;
     private Yarnball currentYarnBall;
     private Transform currentBallTransform;
+    [SerializeField]private CatHUD hud;
     [SerializeField]private Animator animator;
     [SerializeField]private DialogueManager dialogueManager;
+    public int lives;
     public BoxCollider2D collider;
     public float readTime=6f;
+    public int currentlevel=1;
     private bool talking= false;
     [SerializeField] private Rigidbody2D rb;
-    public HealthSystem playerHealthSys;
 
 void Start(){
-    playerHealthSys= GetComponent<HealthSystem>();
+    lives=data.lives;
     dialogueManager= GetComponent<DialogueManager>();//if you need it use saySomething(int);
 }
     public void triggerDialogue(int start,int end){
@@ -41,6 +45,14 @@ void Start(){
         talking=false;
         yield return new WaitForSeconds(0.5f);
         if (!last) triggerDialogue(start+1,end);
+    }
+    public void Die(){
+        if (lives==1){
+            SceneManager.LoadScene("level 1");
+            Destroy(data);
+        }
+        hud.LoseLife();
+        SceneManager.LoadScene("prototype");
     }
 void Animate(){
     if (horizontal == 0f){
@@ -61,7 +73,6 @@ private void Update()
     {
         transform.rotation = currentBallTransform.rotation;
         transform.position = currentBallTransform.position;
-        Flip();
         return;
     }
 
@@ -71,10 +82,6 @@ private void Update()
         animator.SetBool("grounded", false);
         grounded = false;
     }
-    // if (Input.GetKeyDown(KeyCode.Q))
-    // {
-    //     playerHealthSys.Hit();
-    // }
 
     if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
     {
@@ -114,7 +121,7 @@ private void Update()
         yield return new WaitForSeconds(2f);
         rolling =false;
         animator.SetBool("trapped",false);
-        collider.isTrigger=false; //FIXME
+        collider.isTrigger=false; 
         currentYarnBall.releasetCat();
     }
     private void OnTriggerEnter2D(Collider2D obj) {

@@ -6,7 +6,7 @@ using UnityEngine;
 public class Dog : MonoBehaviour
 {
     public Transform catTransform; 
-    [SerializeField]public HealthSystem playerhs;
+    [SerializeField]public Player player;
     public float sightRange = 10f; 
     public float chaseSpeed = 5f;  
     public float wanderSpeed = 2f; 
@@ -15,13 +15,11 @@ public class Dog : MonoBehaviour
 
     private Vector3 wanderTarget; 
     private Animator animator;
-    private HealthSystem hs;
     private bool isChasing = false;
 
     void Start()
     {
         transform.localScale = new Vector3(8.2f,9f,1);
-        hs = GetComponent<HealthSystem>();
         animator = GetComponent<Animator>();
         StartCoroutine(Wander());
     }
@@ -65,9 +63,7 @@ public class Dog : MonoBehaviour
         }
     }
     private void AttackCat(){
-            hs.myTarget=playerhs;
-            hs.hasTarget=true;
-            hs.Hit();//attack the target (player)
+        player.Die();
     }
 
     private IEnumerator Wander()
