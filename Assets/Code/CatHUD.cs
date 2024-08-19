@@ -19,8 +19,8 @@ public class CatHUD : MonoBehaviour
     public void LoseLife()
     {
         if (dataStore.instance.lives == 1){
-            dataStore.instance.lives=9;
-            SceneManager.LoadScene(1);
+            dataStore.instance.lives=maxLives;
+            SceneManager.LoadScene("level 1");
             return;
         }
         if (dataStore.instance.lives> 0)

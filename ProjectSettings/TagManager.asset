@@ -9,6 +9,7 @@ TagManager:
   - dialogueTrigger
   - PositiveCollectable
   - NegativeCollectable
+  - dog
   layers:
   - Default
   - TransparentFX
