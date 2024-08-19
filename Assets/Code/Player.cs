@@ -12,8 +12,6 @@ public class Player : MonoBehaviour
     private bool isFacingRight = true;
     private bool grounded = false;
     private bool rolling =false;
-    private Yarnball currentYarnBall;
-    private Transform currentBallTransform;
     [SerializeField]private CatHUD hud;
     [SerializeField]private Animator animator;
     public float sizeChangeAmount = 3f; // Amount by which the cat's size increases
@@ -88,8 +86,7 @@ private void Update()
     Animate();
     if (rolling)
     {
-        transform.rotation = currentBallTransform.rotation;
-        transform.position = currentBallTransform.position;
+        transform.Rotate(0f,0f,1f);
         return;
     }
 
@@ -125,24 +122,18 @@ private void Update()
             grounded = true;
         }
         if (obj.gameObject.CompareTag("dog")){
-            Die();
+               Die();
         }
         if (obj.gameObject.CompareTag("yarnball")){
-            currentYarnBall=obj.gameObject.GetComponent<Yarnball>();
-            currentBallTransform=obj.gameObject.GetComponent<Transform>();
             animator.SetBool("trapped",true);
-            collider.isTrigger = true;
-            currentYarnBall.caughtCat();
             rolling =true;
             StartCoroutine("escape");
-        }
+        } 
     }
     IEnumerator escape(){
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         rolling =false;
         animator.SetBool("trapped",false);
-        collider.isTrigger=false; 
-        currentYarnBall.releasetCat();
     }
     private void OnTriggerEnter2D(Collider2D obj) {
        if (obj.gameObject.tag == "dialogueTrigger") {
@@ -160,6 +151,12 @@ private void Update()
         {
             DecreaseSize();
             Destroy(obj.gameObject); // Destroy the collectable after collection
+        }
+        if (obj.gameObject.CompareTag("yarnball")){
+            animator.SetBool("trapped",true);
+            rolling =true;
+            StartCoroutine("escape");
+            Destroy(obj.gameObject); 
         }
     }
     private void Flip()
