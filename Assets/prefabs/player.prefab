@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2857967845114467276}
   - component: {fileID: 5373786823528666600}
   - component: {fileID: 5124184412996769475}
+  - component: {fileID: 3820625862839413380}
   m_Layer: 3
   m_Name: player
   m_TagString: Untagged
@@ -153,7 +154,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.010596395, y: 0.07751578}
+  m_Offset: {x: -0.010596395, y: 0.083781265}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -163,7 +164,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.19595408, y: 0.117357135}
+  m_Size: {x: 0.19595408, y: 0.10482617}
   m_EdgeRadius: 0
 --- !u!95 &5513430234077051398
 Animator:
@@ -199,15 +200,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb920567297f19e68e7834f1afcdfb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cc: {fileID: 3820625862839413380}
   hud: {fileID: 0}
   animator: {fileID: 5513430234077051398}
-  sizeChangeAmount: 3
-  minSize: 3
-  maxSize: 10
+  sizeChangeAmount: 75
+  minSize: 4.5
+  maxSize: 8
   dialogueManager: {fileID: 5373786823528666600}
-  collider: {fileID: 6224622027824481510}
-  readTime: 6
-  currentlevel: 1
+  bc: {fileID: 6224622027824481510}
+  readTime: 0
   rb: {fileID: 6524184650037100163}
 --- !u!114 &5373786823528666600
 MonoBehaviour:
@@ -235,4 +236,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c764dc8f4097349b822408b30edd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BounceStrength: 1500
+  BounceStrength: 10
+--- !u!58 &3820625862839413380
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226915019383471063}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.006627103, y: 0.09000002}
+  m_Radius: 0.11269238

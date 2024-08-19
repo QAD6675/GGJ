@@ -390,24 +390,12 @@ PrefabInstance:
       value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 4014205584371671005, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
-      propertyPath: xOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4014205584371671005, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
-      propertyPath: yOffset
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4014205584371671005, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
-      propertyPath: yClamp.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4014205584371671005, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: targetFollow
       value: 
       objectReference: {fileID: 1499419143}
     - target: {fileID: 7364471589484016952, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7364471589484016952, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1209,13 +1197,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 696328765805948556, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
-      propertyPath: dialogue
-      value: 
-      objectReference: {fileID: 1489077295}
     - target: {fileID: 1226915019383471063, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226915019383471063, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1755073143314367553, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1261,42 +1249,10 @@ PrefabInstance:
       propertyPath: hud
       value: 
       objectReference: {fileID: 184151186}
-    - target: {fileID: 2857967845114467276, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
-      propertyPath: maxSize
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2857967845114467276, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
-      propertyPath: minSize
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2857967845114467276, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
-      propertyPath: sizeChangeAmount
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 3707100757447890164, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
-      propertyPath: readTime
-      value: 6.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3928012136096420859, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
-      propertyPath: stretchSlider
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5124184412996769475, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
-      propertyPath: BounceStrength
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5373786823528666600, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 1489077295}
-    - target: {fileID: 6224622027824481510, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
-      propertyPath: m_Size.y
-      value: 0.10482617
-      objectReference: {fileID: 0}
-    - target: {fileID: 6224622027824481510, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.083781265
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     private float horizontal;
+    public CircleCollider2D cc;
     private float speed = 8f;
     private float jumpingPower = 12f;
     private bool isFacingRight = true;
@@ -19,7 +20,7 @@ public class Player : MonoBehaviour
     public float maxSize = 10f; // Maximum size limit
     private Vector3 originalScale;
     [SerializeField]private DialogueManager dialogueManager;
-    public BoxCollider2D collider;
+    public BoxCollider2D bc;
     public float readTime=6f;
     private bool right;
     private bool talking= false;
@@ -92,7 +93,6 @@ private void Update()
         }else{
         transform.Rotate(0f,0f,2f);
         }
-        return;
     }
 
     if (Input.GetButtonDown("Jump") && grounded)
@@ -117,7 +117,7 @@ private void Update()
 
     private void FixedUpdate()
     {
-        if(rolling||talking)return;
+        if(talking)return;
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
@@ -129,16 +129,14 @@ private void Update()
         if (obj.gameObject.CompareTag("dog")){
                Die();
         }
-        if (obj.gameObject.CompareTag("yarnball")){
-            animator.SetBool("trapped",true);
-            rolling =true;
-            StartCoroutine("escape");
-        } 
     }
     IEnumerator escape(){
         yield return new WaitForSeconds(3f);
+        bc.enabled = true;
+        cc.enabled =false;
         rolling =false;
         animator.SetBool("trapped",false);
+        transform.rotation=Quaternion.Euler(0,0,0);
     }
     private void OnTriggerEnter2D(Collider2D obj) {
        if (obj.gameObject.tag == "dialogueTrigger") {
@@ -162,14 +160,18 @@ private void Update()
             rolling =true;
             right=true;
             StartCoroutine("escape");
-            Destroy(obj.gameObject); 
+            Destroy(obj.gameObject);
+            bc.enabled = false;
+            cc.enabled=true; 
         }
         if (obj.gameObject.CompareTag("Lyarnball")){
             animator.SetBool("trapped",true);
             right=false;
             rolling =true;
             StartCoroutine("escape");
-            Destroy(obj.gameObject); 
+            Destroy(obj.gameObject);
+            cc.enabled =true;
+            bc.enabled = false;
         }
     }
     private void Flip()
