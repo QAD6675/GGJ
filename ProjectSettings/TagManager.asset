@@ -7,6 +7,8 @@ TagManager:
   - ground
   - yarnball
   - dialogueTrigger
+  - PositiveCollectable
+  - NegativeCollectable
   layers:
   - Default
   - TransparentFX

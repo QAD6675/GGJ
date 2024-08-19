@@ -332,14 +332,15 @@ MonoBehaviour:
   catImage: {fileID: 1450810414756812551}
   livesText: {fileID: 3729124645005049005}
   catSprites:
-  - {fileID: -5595504334527487047, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
-  - {fileID: 8611401741633001786, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
-  - {fileID: 3789214938911851938, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
-  - {fileID: 2541945296383253928, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
-  - {fileID: 5637047353605358658, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
-  - {fileID: 3626682291281597310, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
-  - {fileID: 6137487473045586905, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
   - {fileID: -9022864194092890511, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 6137487473045586905, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 3626682291281597310, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 5637047353605358658, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 2541945296383253928, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 3789214938911851938, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 8611401741633001786, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: -5595504334527487047, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
+  - {fileID: 1606753425120854569, guid: 3b1e7a876934c93b59dcaa8c68646fdc, type: 3}
   maxLives: 9
 --- !u!1001 &2989424592091938032
 PrefabInstance:
@@ -350,6 +351,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 578439867405071942}
     m_Modifications:
     - target: {fileID: 1770692974630779120, guid: b47908b37f7a135149c315e965fac190, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770692974630779120, guid: b47908b37f7a135149c315e965fac190, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -358,7 +363,15 @@ PrefabInstance:
       value: energy
       objectReference: {fileID: 0}
     - target: {fileID: 2152898130254151049, guid: b47908b37f7a135149c315e965fac190, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152898130254151049, guid: b47908b37f7a135149c315e965fac190, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152898130254151049, guid: b47908b37f7a135149c315e965fac190, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2371815714556915462, guid: b47908b37f7a135149c315e965fac190, type: 3}
