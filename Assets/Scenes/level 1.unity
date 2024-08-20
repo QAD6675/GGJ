@@ -1249,6 +1249,10 @@ PrefabInstance:
       propertyPath: hud
       value: 
       objectReference: {fileID: 184151186}
+    - target: {fileID: 2857967845114467276, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
+      propertyPath: readTime
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5373786823528666600, guid: 1355f49e284a408939e525d1d0fa51a4, type: 3}
       propertyPath: dialogue
       value: 

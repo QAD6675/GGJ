@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     [SerializeField]private DialogueManager dialogueManager;
     public BoxCollider2D bc;
     public float readTime=6f;
+    public int currentLevel;
     private bool right;
     private bool talking= false;
     [SerializeField] private Rigidbody2D rb;
@@ -68,7 +70,7 @@ private void DecreaseSize()
     }
     public void Die(){
         hud.LoseLife();
-        SceneManager.LoadScene("prototype");
+        SceneManager.LoadScene(currentLevel);
     }
 void Animate(){
     if (horizontal == 0f){
@@ -90,9 +92,17 @@ private void Update()
         if (right)
         {
         transform.Rotate(0f,0f,-2f);
+        rb.AddForce(new Vector2(10f,0f), ForceMode2D.Impulse);
         }else{
         transform.Rotate(0f,0f,2f);
+        rb.AddForce(new Vector2(-10f, 0f), ForceMode2D.Impulse);
         }
+        if (Input.GetButtonDown("Jump") && grounded){
+        rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        animator.SetBool("grounded", false);
+        grounded = false;
+        }
+        return;
     }
 
     if (Input.GetButtonDown("Jump") && grounded)
@@ -118,6 +128,14 @@ private void Update()
     private void FixedUpdate()
     {
         if(talking)return;
+        if (rolling){
+            if(right){
+            rb.velocity=new Vector2(speed, rb.velocity.y);
+            }else{
+            rb.velocity=new Vector2(-speed, rb.velocity.y);
+            }
+            return;
+        }
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
@@ -126,8 +144,8 @@ private void Update()
             animator.SetBool("grounded", true);
             grounded = true;
         }
-        if (obj.gameObject.CompareTag("dog")){
-               Die();
+        if (obj.gameObject.CompareTag("dog")&&!rolling){
+           Die();
         }
     }
     IEnumerator escape(){
@@ -158,6 +176,7 @@ private void Update()
         if (obj.gameObject.CompareTag("Ryarnball")){
             animator.SetBool("trapped",true);
             rolling =true;
+            rb.velocity=Vector2.zero;
             right=true;
             StartCoroutine("escape");
             Destroy(obj.gameObject);
@@ -167,6 +186,7 @@ private void Update()
         if (obj.gameObject.CompareTag("Lyarnball")){
             animator.SetBool("trapped",true);
             right=false;
+            rb.velocity=Vector2.zero;
             rolling =true;
             StartCoroutine("escape");
             Destroy(obj.gameObject);
