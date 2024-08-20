@@ -11,14 +11,31 @@ public class Dog : MonoBehaviour
     public float wanderSpeed = 2f; 
     public float wanderRadius = 5f; 
     private Vector3 wanderTarget; 
+    public AudioClip[] dogAudio;
+    public AudioSource audioSource;
     private Animator animator;
     private bool isChasing = false;
 
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         transform.localScale = new Vector3(6.2f,7f,1);
         animator = GetComponent<Animator>();
         StartCoroutine(Wander());
+    }
+    public void PlayAudio(string str)
+    {
+        int i=0;
+        if (str=="spot")
+        {
+            i=Random.Range(0,1);   
+        }else if(str=="chase"){
+            i=Random.Range(2,dogAudio.Length);
+            audioSource.loop=true;
+        }
+        audioSource.clip = dogAudio[i];
+        audioSource.Play();
     }
 
     void Update()
@@ -29,6 +46,7 @@ public class Dog : MonoBehaviour
         {
             animator.SetBool("spottedPlayer",true);
             animator.SetBool("wandering",false);
+            PlayAudio("spot");
             isChasing = true;
             StartCoroutine(waitForAnimation());
         }
@@ -42,6 +60,7 @@ public class Dog : MonoBehaviour
         animator.SetBool("spottedPlayer",false);
         animator.SetBool("chasingPlayer",true);
         ChaseCat();
+        PlayAudio("chase");
     }
 
     private void ChaseCat()

@@ -209,7 +209,25 @@ MonoBehaviour:
   dialogueManager: {fileID: 5373786823528666600}
   bc: {fileID: 6224622027824481510}
   readTime: 0
+  currentLevel: 4
   rb: {fileID: 6524184650037100163}
+  catVoice:
+  - {fileID: 8300000, guid: da68c9fe1f7cccbb39b3bc9c27eaa68a, type: 3}
+  - {fileID: 8300000, guid: 03b8347fcf78e154a859455fbfbddcbf, type: 3}
+  - {fileID: 8300000, guid: 9b5dc3015219ca1af9ab700f7e5b0856, type: 3}
+  - {fileID: 8300000, guid: 3f537e3931bb7065e842d1b9785925bf, type: 3}
+  - {fileID: 8300000, guid: 3bf60b155b9940a3fa3ff484c09aed72, type: 3}
+  - {fileID: 8300000, guid: 3b791c5ff81761be98137fcd21573be0, type: 3}
+  - {fileID: 8300000, guid: 8770637f81a84ffa69b9ceacc7c726f5, type: 3}
+  - {fileID: 8300000, guid: 485b3bf579befb4e8bb57552be595166, type: 3}
+  - {fileID: 8300000, guid: 83318c4a567b03fb0a5b1202206c15ae, type: 3}
+  - {fileID: 8300000, guid: 3a954ee058c45543a9770f91073c5fd7, type: 3}
+  - {fileID: 8300000, guid: c3cf8c3abf456ee779be56ee711d1831, type: 3}
+  - {fileID: 8300000, guid: 746ec47f9d5314bb5b849ba7c572da76, type: 3}
+  - {fileID: 8300000, guid: f2db8281870578315bb4b1db6b146d1f, type: 3}
+  - {fileID: 8300000, guid: 66b5a4ca70ad7658dbd6442e2bb5cd1a, type: 3}
+  - {fileID: 8300000, guid: 1823eeb415f62f6f2931900a247f66dc, type: 3}
+  - {fileID: 8300000, guid: 55ea627f70fdbc29f8bd6ba7cbfe0908, type: 3}
 --- !u!114 &5373786823528666600
 MonoBehaviour:
   m_ObjectHideFlags: 0

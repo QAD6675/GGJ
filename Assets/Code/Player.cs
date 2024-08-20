@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -27,6 +26,28 @@ public class Player : MonoBehaviour
     private bool right;
     private bool talking= false;
     [SerializeField] private Rigidbody2D rb;
+    public AudioClip[] catVoice; // Array to hold game tracks
+    public AudioSource audioSource;
+    public void PlayAudio(string str)
+    {
+        int i=0;
+        if (str=="purr")
+        {
+            i=Random.Range(12,14);   
+        }else if(str=="meow"){
+            i=Random.Range(1,10);
+        }else if(str=="gurr"){
+            i=Random.Range(10,12);
+        }else if(str=="die"){
+            i =0;
+        }else if(str=="jump"){
+            i=14;
+        }else if(str=="win"){
+            i=15;
+        }
+        audioSource.clip = catVoice[i];
+        audioSource.Play();
+    }
 
 
 private void IncreaseSize()
@@ -48,6 +69,7 @@ private void DecreaseSize()
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         originalScale = transform.localScale; // Store the original size of the cat
         dialogueManager= GetComponent<DialogueManager>();//if you need it use saySomething(int);
     }
@@ -69,6 +91,7 @@ private void DecreaseSize()
         if (!last) triggerDialogue(start+1,end);
     }
     public void Die(){
+        PlayAudio("die");
         hud.LoseLife();
         SceneManager.LoadScene(currentLevel);
     }
@@ -107,9 +130,22 @@ private void Update()
 
     if (Input.GetButtonDown("Jump") && grounded)
     {
+        PlayAudio("jump");
         rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         animator.SetBool("grounded", false);
         grounded = false;
+    }
+    if(Input.GetKey(KeyCode.Q)){
+        PlayAudio("meow");
+    }
+    if(Input.GetKey(KeyCode.E)){
+        PlayAudio("purr");
+    }
+    if(Input.GetKey(KeyCode.R)){
+        SceneManager.LoadScene(currentLevel);
+    }
+    if(Input.GetKey(KeyCode.M)){
+        SceneManager.LoadScene("Main_menu");
     }
 
     if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -192,6 +228,9 @@ private void Update()
             Destroy(obj.gameObject);
             cc.enabled =true;
             bc.enabled = false;
+        }
+        if (obj.gameObject.CompareTag("door")) {
+            PlayAudio("win");
         }
     }
     private void Flip()
