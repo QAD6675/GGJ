@@ -93,7 +93,7 @@ private void DecreaseSize()
     public void Die(){
         PlayAudio("die");
         hud.LoseLife();
-        SceneManager.LoadScene(currentLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 void Animate(){
     if (horizontal == 0f){
@@ -184,6 +184,7 @@ private void Update()
            Die();
         }
     }
+
     IEnumerator escape(){
         yield return new WaitForSeconds(3f);
         bc.enabled = true;
@@ -219,7 +220,7 @@ private void Update()
             bc.enabled = false;
             cc.enabled=true; 
         }
-        if (obj.gameObject.CompareTag("Lyarnball")){
+        if (obj.gameObject.tag == "Lyarnball"){
             animator.SetBool("trapped",true);
             right=false;
             rb.velocity=Vector2.zero;
@@ -229,7 +230,7 @@ private void Update()
             cc.enabled =true;
             bc.enabled = false;
         }
-        if (obj.gameObject.CompareTag("door")) {
+        if (obj.gameObject.tag == "door") {
             PlayAudio("win");
         }
     }

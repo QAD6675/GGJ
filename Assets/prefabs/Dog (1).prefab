@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6376811861203481305}
   m_Layer: 0
   m_Name: Dog (1)
-  m_TagString: Untagged
+  m_TagString: dog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,8 +178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   catTransform: {fileID: 0}
   sightRange: 10
-  chaseSpeed: 5
-  wanderSpeed: 2
+  chaseSpeed: 1.2
+  wanderSpeed: 0.5
   wanderRadius: 5
   dogAudio:
   - {fileID: 8300000, guid: c87a290f3e48f7ebc9c8ffad78b3e6a2, type: 3}

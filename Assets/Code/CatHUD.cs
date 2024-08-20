@@ -23,7 +23,7 @@ public class CatHUD : MonoBehaviour
             SceneManager.LoadScene("level 1"); //FIXME
             return;
         }
-        if (dataStore.instance.lives> 0)
+        else if (dataStore.instance.lives> 0)
         {
             dataStore.instance.lives--;
             UpdateHUD();

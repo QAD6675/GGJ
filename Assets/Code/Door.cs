@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    public int currentLevel=1;
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "Player"){
-            if (currentLevel ==5) SceneManager.LoadScene("creds");
-            SceneManager.LoadScene($"level {currentLevel+1}");
+    public string TeleportToLevel;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene(TeleportToLevel);
         }
     }
 }
