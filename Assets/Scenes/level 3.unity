@@ -274,8 +274,6 @@ MonoBehaviour:
   chaseSpeed: 5
   wanderSpeed: 2
   wanderRadius: 5
-  dogAudio: []
-  audioSource: {fileID: 0}
 --- !u!1 &208584545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,8 +2149,6 @@ MonoBehaviour:
   chaseSpeed: 5
   wanderSpeed: 2
   wanderRadius: 5
-  dogAudio: []
-  audioSource: {fileID: 0}
 --- !u!1 &1329428054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,7 +2892,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3262685922088224382, guid: afbfd382744d4e712acb5679e58a25a7, type: 3}
       propertyPath: currentLevel
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6496130825090781258, guid: afbfd382744d4e712acb5679e58a25a7, type: 3}
       propertyPath: m_Name

@@ -13,8 +13,6 @@ TagManager:
   - spring
   - Ryarnball
   - Lyarnball
-  - door
-  - milk
   layers:
   - Default
   - TransparentFX
