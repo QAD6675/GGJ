@@ -192,7 +192,21 @@ private void Update()
         animator.SetBool("trapped",false);
         transform.rotation=Quaternion.Euler(0,0,0);
     }
+    IEnumerator win(){
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("creds");
+    }
     private void OnTriggerEnter2D(Collider2D obj) {
+        if (obj.gameObject.CompareTag("door")) {
+            Debug.Log("cooked");
+            SceneManager.LoadScene($"level {currentLevel}");
+            PlayAudio("win");
+        }
+        if (obj.gameObject.CompareTag("milk")) {
+            animator.SetBool("won",true);
+            StartCoroutine("win");
+            PlayAudio("win");
+        }
        if (obj.gameObject.tag == "dialogueTrigger") {
             dialogueTrigger dt =obj.gameObject.GetComponent<dialogueTrigger>();
             if (dt.spoken) return;
@@ -228,9 +242,6 @@ private void Update()
             Destroy(obj.gameObject);
             cc.enabled =true;
             bc.enabled = false;
-        }
-        if (obj.gameObject.CompareTag("door")) {
-            PlayAudio("win");
         }
     }
     private void Flip()
