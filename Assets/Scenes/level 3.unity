@@ -2953,11 +2953,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4014205584371671005, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: xClamp.x
-      value: -0.96
+      value: 1.57
       objectReference: {fileID: 0}
     - target: {fileID: 4014205584371671005, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: xClamp.y
-      value: 28.72
+      value: 26.26
       objectReference: {fileID: 0}
     - target: {fileID: 4014205584371671005, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: yClamp.x
@@ -2973,7 +2973,7 @@ PrefabInstance:
       objectReference: {fileID: 2098497954}
     - target: {fileID: 7364471589484016952, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.88
+      value: 1.74
       objectReference: {fileID: 0}
     - target: {fileID: 7364471589484016952, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: m_LocalPosition.y
