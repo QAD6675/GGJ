@@ -19,20 +19,22 @@ public class MovingPlatform : MonoBehaviour
 
     private void Start()
     {
-        points = new Vector3[MovePoints.Length];
-
-        for (int i = 0; i < MovePoints.Length; i++)
+        if (MovePoints.Length > 0)
         {
-            points[i] = MovePoints[i].position;
+            points = new Vector3[MovePoints.Length];
+            for (int i = 0; i < MovePoints.Length; i++)
+            {
+                points[i] = MovePoints[i].position;
+            }
         }
     }
 
     private void Update()
     {
-        if (move == false)
+        if (!move)
             return;
 
-        transform.position = Vector2.MoveTowards(transform.position, points[currentPoint], Speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, points[currentPoint], Speed * Time.deltaTime);
 
         if (transform.position == points[currentPoint])
         {
@@ -41,16 +43,13 @@ public class MovingPlatform : MonoBehaviour
             else if (currentPoint == 0)
                 reverse = false;
 
-            if (reverse)
-                currentPoint--;
-            else
-                currentPoint++;
+            currentPoint += reverse ? -1 : 1;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<Rigidbody2D>() != null)
+        if (collision.gameObject.CompareTag("Player")) // Assuming "Player" is the tag you're interested in
         {
             collision.transform.SetParent(transform, true);
             move = true;
@@ -59,7 +58,8 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponent<Rigidbody2D>() != null)
+        if (collision.gameObject.CompareTag("Player"))
             collision.transform.parent = null;
     }
 }
+

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,13 +7,11 @@ public class MenuScript : MonoBehaviour
 {
 
     public Button playButton;
-    public Button quitButton;
     public Button credsButton;
 
     void Start()
     {
         playButton.onClick.AddListener(PlayGame);
-        quitButton.onClick.AddListener(QuitGame);
         credsButton.onClick.AddListener(OpenCreds);
     }
     public void PlayGame()
@@ -27,10 +23,4 @@ public class MenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("creds");
     }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
 }

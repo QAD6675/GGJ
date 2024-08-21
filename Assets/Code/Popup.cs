@@ -1,55 +1,38 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class Popup : MonoBehaviour
 {
-    private Vector3 initialScale;
+    [SerializeField] private Vector3 initialScale = new Vector3(1f, 1f, 1f);
+    [SerializeField] private Vector3 targetScale = new Vector3(2f, 2f, 2f);
+    [SerializeField] private float animationSpeed = 5f;
 
-    public void pop()
+    public void Pop()
     {
         gameObject.SetActive(true);
-        // Initialize the initial scale of the popup
-        transform.localScale = new Vector3(1f,1f,1f);
-        initialScale = transform.localScale;
-        // Start the animation
-        StartCoroutine(AnimatePopup());
+        transform.localScale = initialScale;
+        StartCoroutine(AnimatePopup(targetScale));
     }
 
-private IEnumerator AnimatePopup()
-{
-        Vector3 targetScale = initialScale*2;
-
-        // Loop until the popup is fully shrunk
-        while (transform.localScale != targetScale)
-        {
-            // Shrink the popup towards the target scale
-            transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime);
-
-            yield return null;
-        }
-    // Ensure the popup is fully scaled at the end of the animation
-    transform.localScale = targetScale;
-}
-
-public  void close(){
-    StartCoroutine(ShrinkPopup());
-}
-    private IEnumerator ShrinkPopup()
+    private IEnumerator AnimatePopup(Vector3 target)
     {
-        // Calculate the target scale for shrinking
-        Vector3 targetScale = Vector3.zero;
-
-        // Loop until the popup is fully shrunk
-        while (Vector3.Distance(transform.localScale,targetScale)>0.9f)
+        while (Vector3.Distance(transform.localScale, target) > 0.01f)
         {
-        // Debug.Log(Vector3.Distance(transform.localScale,targetScale));
-            // Shrink the popup towards the target scale
-            transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime*6f);
+            transform.localScale = Vector3.Lerp(transform.localScale, target, Time.deltaTime * animationSpeed);
             yield return null;
         }
-        // Disable the popup after shrinking
-        gameObject.SetActive(false);
+        transform.localScale = target;
+    }
+
+    public void Close()
+    {
+        StartCoroutine(AnimatePopup(Vector3.zero));
+    }
+
+    private void OnDisable()
+    {
+        // Reset scale to ensure it starts correctly next time it's enabled
+        transform.localScale = initialScale;
     }
 }
+

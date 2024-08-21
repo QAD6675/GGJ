@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private bool isFacingRight = true;
     private bool grounded = false;
     private bool rolling =false;
+    [HideInInspector]public bool hasKey=false;
     [SerializeField]private CatHUD hud;
     [SerializeField]private Animator animator;
     public float sizeChangeAmount = 3f; // Amount by which the cat's size increases
@@ -28,45 +29,33 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     public AudioClip[] catVoice; // Array to hold game tracks
     public AudioSource audioSource;
-    public void PlayAudio(string str)
+public void PlayAudio(string str)
+{
+    Dictionary<string, int[]> soundRanges = new Dictionary<string, int[]>
     {
-        int i=0;
-        if (str=="purr")
-        {
-            i=Random.Range(12,14);   
-        }else if(str=="meow"){
-            i=Random.Range(1,10);
-        }else if(str=="gurr"){
-            i=Random.Range(10,12);
-        }else if(str=="die"){
-            i =0;
-        }else if(str=="jump"){
-            i=14;
-        }else if(str=="win"){
-            i=15;
-        }
+        {"purr", new int[]{12, 14}},
+        {"meow", new int[]{1, 10}},
+        {"gurr", new int[]{10, 12}},
+        {"jump", new int[]{14, 14}},
+        {"win", new int[]{15, 15}},
+        {"die", new int[]{0, 0}}
+    };
+    if (soundRanges.TryGetValue(str, out int[] range))
+    {
+        int i = Random.Range(range[0], range[1]);
         audioSource.clip = catVoice[i];
         audioSource.Play();
     }
+}
 
-
-private void IncreaseSize()
+public void AdjustSize(bool increase)
 {
-    Vector3 newScale = transform.localScale + new Vector3(sizeChangeAmount, sizeChangeAmount, 0);
+    float adjustment = increase ? sizeChangeAmount : -sizeChangeAmount;
+    Vector3 newScale = transform.localScale + new Vector3(adjustment, adjustment, 0);
     newScale.x = Mathf.Clamp(newScale.x, minSize, maxSize);
     newScale.y = Mathf.Clamp(newScale.y, minSize, maxSize);
     transform.localScale = newScale;
 }
-
-private void DecreaseSize()
-{
-    Vector3 newScale = transform.localScale - new Vector3(sizeChangeAmount, sizeChangeAmount, 0);
-    newScale.x = Mathf.Clamp(newScale.x, minSize, maxSize);
-    newScale.y = Mathf.Clamp(newScale.y, minSize, maxSize);
-    transform.localScale = newScale;
-}
-
-
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -193,47 +182,42 @@ private void Update()
         animator.SetBool("trapped",false);
         transform.rotation=Quaternion.Euler(0,0,0);
     }
-    private void OnTriggerEnter2D(Collider2D obj) {
-       if (obj.gameObject.tag == "dialogueTrigger") {
-            dialogueTrigger dt =obj.gameObject.GetComponent<dialogueTrigger>();
-            if (dt.spoken) return;
-            dt.spoken=true;
-            triggerDialogue(dt.start,dt.end);
-        }
-        if (obj.gameObject.CompareTag("PositiveCollectable"))
-        {
-            IncreaseSize();
+private void OnTriggerEnter2D(Collider2D obj) {
+    switch (obj.gameObject.tag) {
+        case "dialogueTrigger":
+            dialogueTrigger dt = obj.gameObject.GetComponent<dialogueTrigger>();
+            if (!dt.spoken) {
+                dt.spoken = true;
+                triggerDialogue(dt.start, dt.end);
+            }
+            break;
+        case "PositiveCollectable":
+            AdjustSize(true);
             Destroy(obj.gameObject); // Destroy the collectable after collection
-        }
-        else if (obj.gameObject.CompareTag("NegativeCollectable"))
-        {
-            DecreaseSize();
+            break;
+        case "NegativeCollectable":
+            AdjustSize(false);
             Destroy(obj.gameObject); // Destroy the collectable after collection
-        }
-        if (obj.gameObject.CompareTag("Ryarnball")){
-            animator.SetBool("trapped",true);
-            rolling =true;
-            rb.velocity=Vector2.zero;
-            right=true;
+            break;
+        case "Ryarnball":
+        case "Lyarnball":
+            right = obj.gameObject.tag == "Ryarnball";
+            animator.SetBool("trapped", true);
+            rb.velocity = Vector2.zero;
+            rolling = true;
             StartCoroutine("escape");
             Destroy(obj.gameObject);
             bc.enabled = false;
-            cc.enabled=true; 
-        }
-        if (obj.gameObject.tag == "Lyarnball"){
-            animator.SetBool("trapped",true);
-            right=false;
-            rb.velocity=Vector2.zero;
-            rolling =true;
-            StartCoroutine("escape");
-            Destroy(obj.gameObject);
-            cc.enabled =true;
-            bc.enabled = false;
-        }
-        if (obj.gameObject.tag == "door") {
+            cc.enabled = true;
+            break;
+        case "door":
             PlayAudio("win");
-        }
+            break;
+        case "key":
+            hasKey = true;
+            break;
     }
+}
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BouncePadEffect : MonoBehaviour
 {
-    [SerializeField] float BounceStrength = 15f;
+    [SerializeField] float BounceStrength = 5f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

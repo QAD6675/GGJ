@@ -24,20 +24,27 @@ public class Dog : MonoBehaviour
         animator = GetComponent<Animator>();
         StartCoroutine(Wander());
     }
-    public void PlayAudio(string str)
+public void PlayAudio(AudioType type)
+{
+    AudioClip clip = null;
+    switch (type)
     {
-        int i=0;
-        if (str=="spot")
-        {
-            i=Random.Range(0,1);   
-        }else if(str=="chase"){
-            i=Random.Range(2,dogAudio.Length);
-            audioSource.loop=true;
-        }
-        audioSource.clip = dogAudio[i];
-        audioSource.Play();
+        case AudioType.Spot:
+            clip = dogAudio[0]; // Assuming the first clip is always the spot sound.
+            break;
+        case AudioType.Chase:
+            int index = Random.Range(1, dogAudio.Length); // Adjust this based on your actual audio clip arrangement.
+            clip = dogAudio[index];
+            audioSource.loop = true;
+            break;
     }
 
+    if (clip != null)
+    {
+        audioSource.clip = clip;
+        audioSource.Play();
+    }
+}
     void Update()
     {
         float distanceToCat = Vector3.Distance(transform.position, catTransform.position);

@@ -8,17 +8,21 @@ public class ParallaxCamera : MonoBehaviour
 
     private float oldPosition;
 
-    void Start()
+    void Awake()
     {
         oldPosition = transform.position.x;
     }
 
     void Update()
     {
-        if (transform.position.x != oldPosition)
+        float newPosition = transform.position.x;
+        if (newPosition != oldPosition)
         {
-            onCameraTranslate?.Invoke(oldPosition - transform.position.x);
-            oldPosition = transform.position.x;
+            // Calculate the movement delta as new - old.
+            float deltaMovement = newPosition - oldPosition;
+            onCameraTranslate?.Invoke(deltaMovement);
+            oldPosition = newPosition;
         }
     }
 }
+

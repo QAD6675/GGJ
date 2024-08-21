@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cc: {fileID: 3820625862839413380}
+  hasKey: 0
   hud: {fileID: 0}
   animator: {fileID: 5513430234077051398}
   sizeChangeAmount: 1
@@ -210,7 +211,7 @@ MonoBehaviour:
   maxSize: 8
   dialogueManager: {fileID: 5373786823528666600}
   bc: {fileID: 6224622027824481510}
-  readTime: 0
+  readTime: 6
   currentLevel: 4
   rb: {fileID: 6524184650037100163}
   catVoice:
