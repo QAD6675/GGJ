@@ -6,12 +6,24 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour
 {
     public string TeleportToLevel;
+    public bool locked=false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(TeleportToLevel);
+            Player player=collision.gameObject.GetComponent<Player>();
+            if(locked){
+                if(player.hasKey){
+                    SceneManager.LoadScene(TeleportToLevel);
+                    return;
+                }else{
+                    player.triggerDialogue(7,7);///it says you need a key
+                    return;
+                }
+            }else{
+                SceneManager.LoadScene(TeleportToLevel);
+            }
         }
     }
 }

@@ -391,7 +391,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4014205584371671005, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: xClamp.x
-      value: 0
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014205584371671005, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
+      propertyPath: xClamp.y
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 4014205584371671005, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: targetFollow
@@ -399,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 1499419143}
     - target: {fileID: 7364471589484016952, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.11
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 7364471589484016952, guid: 71c1ff03fd674bc5ab14abc906115399, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10920,7 +10924,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3262685922088224382, guid: afbfd382744d4e712acb5679e58a25a7, type: 3}
       propertyPath: TeleportToLevel
-      value: level 3
+      value: level 2
       objectReference: {fileID: 0}
     - target: {fileID: 6496130825090781258, guid: afbfd382744d4e712acb5679e58a25a7, type: 3}
       propertyPath: m_Name

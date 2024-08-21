@@ -205,8 +205,8 @@ MonoBehaviour:
   cc: {fileID: 3820625862839413380}
   hud: {fileID: 0}
   animator: {fileID: 5513430234077051398}
-  sizeChangeAmount: 75
-  minSize: 4.5
+  sizeChangeAmount: 1
+  minSize: 4
   maxSize: 8
   dialogueManager: {fileID: 5373786823528666600}
   bc: {fileID: 6224622027824481510}
