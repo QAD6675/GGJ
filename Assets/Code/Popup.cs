@@ -7,7 +7,7 @@ public class Popup : MonoBehaviour
     [SerializeField] private Vector3 targetScale = new Vector3(2f, 2f, 2f);
     [SerializeField] private float animationSpeed = 5f;
 
-    public void Pop()
+    public void pop()
     {
         gameObject.SetActive(true);
         transform.localScale = initialScale;
@@ -24,7 +24,7 @@ public class Popup : MonoBehaviour
         transform.localScale = target;
     }
 
-    public void Close()
+    public void close()
     {
         StartCoroutine(AnimatePopup(Vector3.zero));
     }

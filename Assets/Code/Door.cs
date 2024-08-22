@@ -18,7 +18,7 @@ public class Door : MonoBehaviour
                     SceneManager.LoadScene(TeleportToLevel);
                     return;
                 }else{
-                    player.triggerDialogue(7,7);///it says you need a key
+                    player.triggerDialogue(6,6);///it says you need a key
                     return;
                 }
             }else{

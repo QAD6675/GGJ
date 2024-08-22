@@ -24,7 +24,11 @@ public class Dog : MonoBehaviour
         animator = GetComponent<Animator>();
         StartCoroutine(Wander());
     }
-public void PlayAudio(AudioType type)
+    private enum AudioType
+    {
+        Spot,Chase
+    }
+private void PlayAudio(AudioType type)
 {
     AudioClip clip = null;
     switch (type)
@@ -53,7 +57,7 @@ public void PlayAudio(AudioType type)
         {
             animator.SetBool("spottedPlayer",true);
             animator.SetBool("wandering",false);
-            PlayAudio("spot");
+            PlayAudio(AudioType.Spot);
             isChasing = true;
             StartCoroutine(waitForAnimation());
         }
@@ -67,7 +71,7 @@ public void PlayAudio(AudioType type)
         animator.SetBool("spottedPlayer",false);
         animator.SetBool("chasingPlayer",true);
         ChaseCat();
-        PlayAudio("chase");
+        PlayAudio(AudioType.Chase);
     }
 
     private void ChaseCat()

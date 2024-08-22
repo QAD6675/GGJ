@@ -214,6 +214,7 @@ private void OnTriggerEnter2D(Collider2D obj) {
             PlayAudio("win");
             break;
         case "key":
+            Destroy(obj.gameObject);
             hasKey = true;
             break;
     }
