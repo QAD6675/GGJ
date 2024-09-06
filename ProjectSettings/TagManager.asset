@@ -13,6 +13,7 @@ TagManager:
   - spring
   - Ryarnball
   - Lyarnball
+  - key
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - player
   - Water
   - UI
-  - 
+  - ground/wall
   - 
   - 
   - 
